@@ -16,6 +16,7 @@ mycmdStr = ' grep -r ' + technique
 
 mycmd = os.popen(mycmdStr)
 
+fw = open(src + '/' + technique + '.txt', 'at')
 lines = mycmd.readlines()
 
 for line in lines:
@@ -33,8 +34,8 @@ for line in lines:
         continue
 
     #将查找到的Rules 写入到对应technique.txt中
-    f = open(src + '/' + technique + '.txt', 'at')
-    f.write(x['title'] + '\r\n')
-    f.close()
+
+    fw.write(x['title'] + '\r\n')
     print(x['title'])
+fw.close()
 
