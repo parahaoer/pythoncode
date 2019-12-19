@@ -8,4 +8,5 @@ mycmd = os.popen(mycmdStr)
 
 lines = mycmd.readlines()
 
-print(lines[0])
+print(lines)
+#print(lines[0])
