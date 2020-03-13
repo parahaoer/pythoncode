@@ -46,5 +46,5 @@ action ={
             "count": count,
         }
 
-es.index(index="index_count",body = action)
+es.index(index="index_test_represent",body = action)
 
