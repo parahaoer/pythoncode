@@ -38,13 +38,15 @@ count = res['hits']['total']['value']
 tatic = "Execution"
 technique = "PowerShell"
 rule_name = "Suspicious Scripting in a WMI Consumer"
+tech_code = "T1086"
 
 action ={
-            "tatic": tatic,
-            "technique": technique,
-            "rule_name": rule_name,
-            "count": count,
+            "Tatic": tatic,
+            "Technique": technique,
+            "Tech_code": "T1086",
+            "Rule": rule_name,
+            "Count": count,
         }
 
-es.index(index="index_test_represent",body = action)
+es.index(index="represent_5",body = action)
 
