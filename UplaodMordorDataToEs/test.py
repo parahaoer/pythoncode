@@ -1,5 +1,11 @@
 #!/usr/bin/python
 #coding:utf-8
+
+'''
+第一步，解压gz文件得到json文件
+第二步，修改nxlog数据
+第三步，使用该脚本通过kafkacat将json文件，该脚本不解压gz文件
+'''
 import os
 import tarfile
 #image_path = 'F:\\迅雷下载\\mordor-master\\mordor-master\\small_datasets\\windows'
