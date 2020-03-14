@@ -47,7 +47,7 @@ action ={
 
 es.index(index="index_test_represent",body = action)
 
-# rule 2###################################
+## #rule 2###################################
 doc = {
   "query": {
     "constant_score": {
@@ -112,4 +112,4 @@ action ={
             "count": count,
         }
 
-es.index(index="index_test_represent",body = action)
+es.index(index="represent_1",body = action)
