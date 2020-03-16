@@ -49,14 +49,14 @@ res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
 tatic = "Defense Evasion"
-technique = ["InstallUtil", "Trusted Developer Utilities"]
+technique = "InstallUtil"
 rule_name = "Possible Applocker Bypass"
-tech_code = ["T1118", "T1127"]
+tech_code = "T1118"
 
 action ={
             "Tatic": tatic,
             "Technique": technique,
-            "Tech_code": "T1086",
+            "Tech_code": tech_code,
             "Rule": rule_name,
             "Count": count,
         }

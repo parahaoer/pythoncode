@@ -42,6 +42,41 @@ doc = {
               "match_phrase": {
                 "param3": "SuspendThread"
               }
+            },
+            {
+              "match_phrase": {
+                "powershell.scriptblock.text": "System.Reflection.Assembly.Load"
+              }
+            },
+            {
+              "match_phrase": {
+                "powershell.scriptblock.text": "[System.Reflection.Assembly]::Load"
+              }
+            },
+            {
+              "match_phrase": {
+                "powershell.scriptblock.text": "[Reflection.Assembly]::Load"
+              }
+            },
+            {
+              "match_phrase": {
+                "powershell.scriptblock.text": "System.Reflection.AssemblyName"
+              }
+            },
+            {
+              "match_phrase": {
+                "powershell.scriptblock.text": "Reflection.Emit.AssemblyBuilderAccess"
+              }
+            },
+            {
+              "match_phrase": {
+                "powershell.scriptblock.text": "Runtime.InteropServices.DllImportAttribute"
+              }
+            },
+            {
+              "match_phrase": {
+                "powershell.scriptblock.text": "SuspendThread"
+              }
             }
           ]
         }
@@ -61,7 +96,7 @@ tech_code = "T1086"
 action ={
             "Tatic": tatic,
             "Technique": technique,
-            "Tech_code": "T1086",
+            "Tech_code": tech_code,
             "Rule": rule_name,
             "Count": count,
         }

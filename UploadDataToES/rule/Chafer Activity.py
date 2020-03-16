@@ -2,7 +2,7 @@ from elasticsearch import Elasticsearch
 
 es = Elasticsearch('helk-elasticsearch:9200')
 
-doc = {
+doc =    {
   "query": {
     "constant_score": {
       "filter": {
@@ -10,15 +10,25 @@ doc = {
           "must": [
             {
               "match_phrase": {
-                "event_id": "20"
+                "event_id": "13"
+              }
+            },
+            {
+              "match_phrase": {
+                "event_type": "SetValue"
               }
             },
             {
               "bool": {
-                "should": [
+                "must": [
                   {
                     "wildcard": {
-                      "wmi_consumer_destination.keyword": "* -Nop *"
+                      "registry_key_path.keyword": "*\\\\Control\\\\SecurityProviders\\\\WDigest\\\\UseLogonCredential"
+                    }
+                  },
+                  {
+                    "match_phrase": {
+                      "registry_key_value": "1"
                     }
                   }
                 ]
@@ -35,10 +45,10 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tatic = "Execution"
-technique = "PowerShell"
-rule_name = "Suspicious Scripting in a WMI Consumer"
-tech_code = "T1086"
+tatic = "Defense Evasion"
+technique = "Modify Registry"
+rule_name = "Chafer Activity"
+tech_code = "T1112"
 
 action ={
             "Tatic": tatic,

@@ -7,21 +7,15 @@ doc = {
     "constant_score": {
       "filter": {
         "bool": {
-          "must": [
+          "should": [
             {
               "match_phrase": {
-                "event_id": "20"
+                "param3": "net group \"domain admins\" /domain"
               }
             },
             {
-              "bool": {
-                "should": [
-                  {
-                    "wildcard": {
-                      "wmi_consumer_destination.keyword": "* -Nop *"
-                    }
-                  }
-                ]
+              "match_phrase": {
+                "param3": "net localgroup administrators"
               }
             }
           ]
@@ -31,14 +25,13 @@ doc = {
   }
 }
 
-
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tatic = "Execution"
-technique = "PowerShell"
-rule_name = "Suspicious Scripting in a WMI Consumer"
-tech_code = "T1086"
+tatic = "Discovery"
+technique = "Account Discovery"
+rule_name = "Suspicious Reconnaissance Activity"
+tech_code = "T1087"
 
 action ={
             "Tatic": tatic,

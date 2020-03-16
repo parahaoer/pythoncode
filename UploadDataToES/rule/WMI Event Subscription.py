@@ -7,21 +7,20 @@ doc = {
     "constant_score": {
       "filter": {
         "bool": {
-          "must": [
+          "should": [
+            {
+              "match_phrase": {
+                "event_id": "19"
+              }
+            },
             {
               "match_phrase": {
                 "event_id": "20"
               }
             },
             {
-              "bool": {
-                "should": [
-                  {
-                    "wildcard": {
-                      "wmi_consumer_destination.keyword": "* -Nop *"
-                    }
-                  }
-                ]
+              "match_phrase": {
+                "event_id": "21"
               }
             }
           ]
@@ -35,10 +34,10 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tatic = "Execution"
-technique = "PowerShell"
-rule_name = "Suspicious Scripting in a WMI Consumer"
-tech_code = "T1086"
+tatic = "Persistence"
+technique = "Windows Management Instrumentation Event Subscription"
+rule_name = "WMI Event Subscription"
+tech_code = "T1084"
 
 action ={
             "Tatic": tatic,

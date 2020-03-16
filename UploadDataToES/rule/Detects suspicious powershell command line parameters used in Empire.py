@@ -7,21 +7,20 @@ doc = {
     "constant_score": {
       "filter": {
         "bool": {
-          "must": [
+          "should": [
             {
               "match_phrase": {
-                "event_id": "20"
+                "param3": "* -NoP -sta -NonI -W Hidden -Enc *"
               }
             },
             {
-              "bool": {
-                "should": [
-                  {
-                    "wildcard": {
-                      "wmi_consumer_destination.keyword": "* -Nop *"
-                    }
-                  }
-                ]
+              "match_phrase": {
+                "param3": "* -noP -sta -w 1 -enc *"
+              }
+            },
+            {
+              "match_phrase": {
+                "param3": "* -NoP -NonI -W Hidden -enc *"
               }
             }
           ]
@@ -31,13 +30,12 @@ doc = {
   }
 }
 
-
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
 tatic = "Execution"
 technique = "PowerShell"
-rule_name = "Suspicious Scripting in a WMI Consumer"
+rule_name = "Detects suspicious powershell command line parameters used in Empire"
 tech_code = "T1086"
 
 action ={

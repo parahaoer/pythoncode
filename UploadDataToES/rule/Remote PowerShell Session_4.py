@@ -7,21 +7,15 @@ doc = {
     "constant_score": {
       "filter": {
         "bool": {
-          "must": [
+          "should": [
             {
-              "match_phrase": {
-                "event_id": "20"
+              "wildcard": {
+                "process_path.keyword": "*\\\\wsmprovhost.exe"
               }
             },
             {
-              "bool": {
-                "should": [
-                  {
-                    "wildcard": {
-                      "wmi_consumer_destination.keyword": "* -Nop *"
-                    }
-                  }
-                ]
+              "wildcard": {
+                "process_parent_path.keyword": "*\\\\wsmprovhost.exe"
               }
             }
           ]
@@ -31,13 +25,12 @@ doc = {
   }
 }
 
-
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
 tatic = "Execution"
 technique = "PowerShell"
-rule_name = "Suspicious Scripting in a WMI Consumer"
+rule_name = "Remote PowerShell Session"
 tech_code = "T1086"
 
 action ={
