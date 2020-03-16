@@ -43,7 +43,7 @@ tech_code = "T1086"
 action ={
             "Tatic": tatic,
             "Technique": technique,
-            "Tech_code": "T1086",
+            "Tech_code": tech_code,
             "Rule": rule_name,
             "Count": count,
         }
