@@ -69,11 +69,6 @@ doc = {
   }
 }
 
-
-
-
-
-
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
