@@ -16,4 +16,7 @@ action ={
               "hasTag":"123",
               "status":"11"
                 }
-es.index(index="index_test",body = action)
+es.index(index="index_test",body = action, id = 2)
+
+
+
