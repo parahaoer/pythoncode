@@ -30,18 +30,18 @@ doc =   {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tatic = "Execution"
+tactic = "Execution"
 technique = "PowerShell"
-rule_name = "Malicious PowerShell Commandlets"
+procedure = "Malicious PowerShell Commandlets"
 tech_code = "T1086"
 
 action ={
-            "Tatic": tatic,
+            "Tactic": tactic,
             "Technique": technique,
             "Tech_code": tech_code,
-            "Rule": rule_name,
-            "Count": count,
+            "Procedure": procedure,
+            "EventCount": count,
         }
 
-es.index(index="represent_5",body = action)
+es.index(index="represent_5",body = action, id = 11)
 

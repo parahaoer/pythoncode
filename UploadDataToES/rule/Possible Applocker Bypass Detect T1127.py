@@ -48,18 +48,18 @@ doc =  {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tatic = "Defense Evasion"
+tactic = "Defense Evasion"
 technique = "Trusted Developer Utilities"
-rule_name = "Possible Applocker Bypass"
+procedure = "Possible Applocker Bypass"
 tech_code =  "T1127"
 
 action ={
-            "Tatic": tatic,
+            "Tactic": tactic,
             "Technique": technique,
             "Tech_code": tech_code,
-            "Rule": rule_name,
-            "Count": count,
+            "Procedure": procedure,
+            "EventCount": count,
         }
 
-es.index(index="represent_5",body = action)
+es.index(index="represent_5",body = action, id = 22)
 

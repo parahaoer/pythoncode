@@ -43,18 +43,18 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tatic = "Execution"
+tactic = "Execution"
 technique = "Scripting"
-rule_name = "WMI Spawning Windows PowerShell"
+procedure = "WMI Spawning Windows PowerShell"
 tech_code = "T1064"
 
 action ={
-            "Tatic": tatic,
+            "Tactic": tactic,
             "Technique": technique,
             "Tech_code": tech_code,
-            "Rule": rule_name,
-            "Count": count,
+            "Procedure": procedure,
+            "EventEventCount": count,
         }
 
-es.index(index="represent_5",body = action)
+es.index(index="represent_5",body = action, id = 45)
 

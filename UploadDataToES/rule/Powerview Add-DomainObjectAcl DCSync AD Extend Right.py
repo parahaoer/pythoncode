@@ -51,18 +51,18 @@ doc =   {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tatic = "Credential Access"
+tactic = "Credential Access"
 technique = "Credential Dumping"
-rule_name = "Powerview Add-DomainObjectAcl DCSync AD Extend Right"
+procedure = "Powerview Add-DomainObjectAcl DCSync AD Extend Right"
 tech_code = "T1003"
 
 action ={
-            "Tatic": tatic,
+            "Tactic": tactic,
             "Technique": technique,
             "Tech_code": tech_code,
-            "Rule": rule_name,
-            "Count": count,
+            "Procedure": procedure,
+            "EventCount": count,
         }
 
-es.index(index="represent_5",body = action)
+es.index(index="represent_5",body = action, id = 23)
 
