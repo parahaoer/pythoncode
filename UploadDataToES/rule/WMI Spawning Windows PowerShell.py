@@ -53,7 +53,7 @@ action ={
             "Technique": technique,
             "Tech_code": tech_code,
             "Procedure": procedure,
-            "EventEventCount": count,
+            "EventCount": count,
         }
 
 es.index(index="represent_5",body = action, id = 45)

@@ -4,16 +4,16 @@ es = Elasticsearch('helk-elasticsearch:9200')
 mappings = {
             "mappings": {
                     "properties": {
-                        "Count": {
+                        "EventCount": {
                             "type": "long",
                         },
-                        "Tatic": {
+                        "Tactic": {
                             "type": "keyword"
                         },
                         "Technique": {
                             "type": "keyword"
                         },
-                        "Rule": {
+                        "Procedure": {
                             "type": "keyword"
                         },
                         "Tech_code": {
@@ -23,4 +23,4 @@ mappings = {
                 }
             }
 
-res = es.indices.create(index = 'represent_5',body =mappings)
+res = es.indices.create(index = 'represent_6',body =mappings)
