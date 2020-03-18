@@ -51,18 +51,18 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tatic = "Lateral Movement"
+tactic = "Lateral Movement"
 technique = "Windows Admin Shares"
 procedure = "Copy and Execute File with PsExec"
 tech_code = "T1077"
 
 action ={
-            "Tatic": tatic,
+            "Tactic": tactic,
             "Technique": technique,
             "Tech_code": tech_code,
             "Procedure": procedure,
-            "Count": count,
+            "EventCount": count,
         }
 
-es.index(index="represent_6",body = action)
+es.index(index="represent_5",body = action, id = 59)
 

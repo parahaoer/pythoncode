@@ -49,18 +49,18 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tatic = "Persistence"
+tactic = "Persistence"
 technique = "Logon Scripts"
 procedure = "Logon Scripts"
 tech_code = "T1037"
 
 action ={
-            "Tatic": tatic,
+            "Tactic": tactic,
             "Technique": technique,
             "Tech_code": tech_code,
             "Procedure": procedure,
-            "Count": count,
+            "EventCount": count,
         }
 
-es.index(index="represent_6",body = action)
+es.index(index="represent_5",body = action, id = 84)
 

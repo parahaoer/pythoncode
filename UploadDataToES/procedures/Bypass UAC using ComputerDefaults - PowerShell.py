@@ -4,12 +4,19 @@ es = Elasticsearch('helk-elasticsearch:9200')
 
 doc = {
   "query": {
-    "constant_score": {
-      "filter": {
-        "match": {
-          "process_command_line": "* /INJECTRUNNING *"
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "event_id": "13"
+          }
+        },
+        {
+          "wildcard": {
+            "registry_key_path.keyword":"*\\\\ms-settings\\\\shell\\\\open\\\\command\\\\*"
+          }
         }
-      }
+      ]
     }
   }
 }
@@ -18,9 +25,9 @@ res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
 tactic = "Privilege Escalation"
-technique = "Process Injection"
-procedure = "Process Injection via mavinject.exe"
-tech_code = "T1055"
+technique = "Bypass User Account Control"
+procedure = "Bypass UAC using ComputerDefaults - PowerShell"
+tech_code = "T1088"
 
 action ={
             "Tactic": tactic,
@@ -30,5 +37,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 101)
+es.index(index="represent_5",body = action, id = 51)
 

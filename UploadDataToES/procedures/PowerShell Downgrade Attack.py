@@ -4,24 +4,32 @@ es = Elasticsearch('helk-elasticsearch:9200')
 
 doc = {
   "query": {
-    "constant_score": {
-      "filter": {
-        "wildcard": {
-          "process_command_line.keyword": "*ntdsutil*"
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "process_path": "powershell.exe"
+          }
+        },
+        {
+          "wildcard": {
+            "process_command_line.keyword": "*version*"
+          }
         }
-      }
+      ]
     }
   }
 }
 
 
+
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tactic = "Credential Access"
-technique = "Credential Dumping"
-procedure = "Dump Active Directory Database with NTDSUtil"
-tech_code = "T1003"
+tactic = "Execution"
+technique = "PowerShell"
+procedure = "PowerShell Downgrade Attack"
+tech_code = "T1086"
 
 action ={
             "Tactic": tactic,
@@ -31,5 +39,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 71)
+es.index(index="represent_5",body = action, id = 97)
 

@@ -72,18 +72,18 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tatic = "Persistence"
+tactic = "Persistence"
 technique = "Hidden Files and Directories"
 procedure = "Create Windows System File with Attrib"
 tech_code = "T1158"
 
 action ={
-            "Tatic": tatic,
+            "Tactic": tactic,
             "Technique": technique,
             "Tech_code": tech_code,
             "Procedure": procedure,
-            "Count": count,
+            "EventCount": count,
         }
 
-es.index(index="represent_6",body = action)
+es.index(index="represent_5",body = action, id = 65)
 

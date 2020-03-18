@@ -7,30 +7,18 @@ doc = {
     "constant_score": {
       "filter": {
         "bool": {
-          "should": [
+          "must": [
             {
               "bool": {
                 "must": [
                   {
-                    "bool": {
-                      "should": [
-                        {
-                          "wildcard": {
-                            "process_path.keyword": "*\\\\bitsadmin.exe"
-                          }
-                        }
-                      ]
+                    "match_phrase": {
+                      "event_id": "5140"
                     }
                   },
                   {
-                    "bool": {
-                      "should": [
-                        {
-                          "wildcard": {
-                            "process_command_line.keyword": "* /transfer *"
-                          }
-                        }
-                      ]
+                    "match_phrase": {
+                      "share_name": "Admin$"
                     }
                   }
                 ]
@@ -38,10 +26,16 @@ doc = {
             },
             {
               "bool": {
-                "should": [
+                "must_not": [
                   {
-                    "wildcard": {
-                      "process_command_line.keyword": "*copy bitsadmin.exe*"
+                    "bool": {
+                      "must": [
+                        {
+                          "wildcard": {
+                            "user_name.keyword": "*$"
+                          }
+                        }
+                      ]
                     }
                   }
                 ]
@@ -54,13 +48,15 @@ doc = {
   }
 }
 
+
+
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tactic = "Persistence"
-technique = "BITS Jobs"
-procedure = "Download & Execute"
-tech_code = "T1197"
+tactic = "Lateral Movement"
+technique = "Windows Admin Shares"
+procedure = "Execute command writing output to local Admin Share"
+tech_code = "T1077"
 
 action ={
             "Tactic": tactic,
@@ -70,5 +66,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 70)
+es.index(index="represent_5",body = action, id = 77)
 

@@ -24,18 +24,18 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tatic = "Privilege Escalation"
+tactic = "Privilege Escalation"
 technique = "Bypass User Account Control"
 procedure = "Bypass UAC using Fodhelper"
 tech_code = "T1088"
 
 action ={
-            "Tatic": tatic,
+            "Tactic": tactic,
             "Technique": technique,
             "Tech_code": tech_code,
             "Procedure": procedure,
-            "Count": count,
+            "EventCount": count,
         }
 
-es.index(index="represent_6",body = action)
+es.index(index="represent_5",body = action, id = 53)
 

@@ -1,9 +1,9 @@
 import os
 from ModifyFileData import modifyFileData
 
-ruleDir = './rule/'
+ruleDir = './procedures/'
 
-id = 0
+id = 46
 ruleList = os.listdir(ruleDir)
 for file in ruleList:
     filepath = ruleDir + file

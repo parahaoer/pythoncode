@@ -8,7 +8,19 @@ doc = {
       "must": [
         {
           "match": {
-            "event_id": "255"
+            "process_parent_path": "cmd.exe"
+          }
+        },
+        {
+          "match": {
+            "process_name": "powershell.exe"
+          }
+        },
+        {
+          "wildcard": {
+            "process_command_line.keyword": {
+              "value": "*invoke-apppathbypass*"
+            }
           }
         }
       ]
@@ -17,13 +29,14 @@ doc = {
 }
 
 
+
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tactic = "Defense Evasion"
-technique = "Disabling Security Tools"
-procedure = "Unload Sysmon Filter Driver"
-tech_code = "T1089"
+tactic = "Execution"
+technique = "PowerShell"
+procedure = "Invoke-AppPathBypass"
+tech_code = "T1086"
 
 action ={
             "Tactic": tactic,
@@ -33,5 +46,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 111)
+es.index(index="represent_5",body = action, id = 82)
 

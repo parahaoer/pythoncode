@@ -54,18 +54,18 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tatic = "Credential Access"
+tactic = "Credential Access"
 technique = "Credential Dumping"
 procedure = "Copy NTDS.dit from Volume Shadow Copy"
 tech_code = "T1003"
 
 action ={
-            "Tatic": tatic,
+            "Tactic": tactic,
             "Technique": technique,
             "Tech_code": tech_code,
             "Procedure": procedure,
-            "Count": count,
+            "EventCount": count,
         }
 
-es.index(index="represent_6",body = action)
+es.index(index="represent_5",body = action, id = 60)
 
