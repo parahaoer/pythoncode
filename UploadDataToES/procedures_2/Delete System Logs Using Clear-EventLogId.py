@@ -7,15 +7,15 @@ doc = {
     "constant_score": {
       "filter": {
         "bool": {
-          "should": [
+          "must": [
             {
               "match_phrase": {
-                "param3": "net group \"domain admins\" /domain"
+                "event_id": "104"
               }
             },
             {
               "match_phrase": {
-                "param3": "net localgroup administrators"
+                "source_name": "Microsoft-Windows-Eventlog"
               }
             }
           ]
@@ -25,13 +25,14 @@ doc = {
   }
 }
 
+
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tactic = "Discovery"
-technique = "Permission Groups Discovery"
-procedure = "Suspicious Reconnaissance Activity"
-tech_code = "T1069"
+tactic = "Defense Evasion"
+technique = "Indicator Removal on Host"
+procedure = "Delete System Logs Using Clear-EventLogId"
+tech_code = "T1070"
 
 action ={
             "Tactic": tactic,
@@ -41,5 +42,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 37)
+es.index(index="represent_5",body = action, id = 67)
 

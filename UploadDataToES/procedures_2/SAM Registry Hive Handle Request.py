@@ -2,20 +2,25 @@ from elasticsearch import Elasticsearch
 
 es = Elasticsearch('helk-elasticsearch:9200')
 
-doc = {
+doc =  {
   "query": {
     "constant_score": {
       "filter": {
         "bool": {
-          "should": [
+          "must": [
             {
               "match_phrase": {
-                "param3": "net group \"domain admins\" /domain"
+                "event_id": "4656"
               }
             },
             {
               "match_phrase": {
-                "param3": "net localgroup administrators"
+                "object_type": "Key"
+              }
+            },
+            {
+              "match": {
+                "object_name": "*\\\\SAM"
               }
             }
           ]
@@ -25,13 +30,14 @@ doc = {
   }
 }
 
+
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
 tactic = "Discovery"
-technique = "Permission Groups Discovery"
-procedure = "Suspicious Reconnaissance Activity"
-tech_code = "T1069"
+technique = "Query Registry"
+procedure = "SAM Registry Hive Handle Request"
+tech_code = "T1012"
 
 action ={
             "Tactic": tactic,
@@ -41,5 +47,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 37)
+es.index(index="represent_5",body = action, id = 31)
 

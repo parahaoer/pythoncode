@@ -9,24 +9,8 @@ doc = {
         "bool": {
           "must": [
             {
-              "match_phrase": {
-                "event_id": "4661"
-              }
-            },
-            {
-              "bool": {
-                "should": [
-                  {
-                    "match_phrase": {
-                      "object_type": "SAM_USER"
-                    }
-                  },
-                  {
-                    "match_phrase": {
-                      "object_type": "SAM_GROUP"
-                    }
-                  }
-                ]
+              "wildcard": {
+                "process_parent_path.keyword": "*\\\\mshta.exe"
               }
             },
             {
@@ -34,52 +18,47 @@ doc = {
                 "should": [
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-512"
+                      "process_path.keyword": "*\\\\cmd.exe"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-502"
+                      "process_path.keyword": "*\\\\powershell.exe"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-500"
+                      "process_path.keyword": "*\\\\wscript.exe"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-505"
+                      "process_path.keyword": "*\\\\cscript.exe"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-519"
+                      "process_path.keyword": "*\\\\sh.exe"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-520"
+                      "process_path.keyword": "*\\\\bash.exe"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-544"
+                      "process_path.keyword": "*\\\\reg.exe"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-551"
+                      "process_path.keyword": "*\\\\regsvr32.exe"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-555"
-                    }
-                  },
-                  {
-                    "wildcard": {
-                      "object_name.keyword": "*admin*"
+                      "process_path.keyword": "*\\\\BITSADMIN*"
                     }
                   }
                 ]
@@ -95,10 +74,10 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tactic = "Discovery"
-technique = "Permission Groups Discovery"
-procedure = "AD Privileged Users or Groups Reconnaissance"
-tech_code = "T1069"
+tactic = "Execution"
+technique = "Mshta"
+procedure = "Mshta executes VBScript to execute malicious command"
+tech_code = "T1170"
 
 action ={
             "Tactic": tactic,
@@ -108,5 +87,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 1)
+es.index(index="represent_5",body = action, id = 94)
 

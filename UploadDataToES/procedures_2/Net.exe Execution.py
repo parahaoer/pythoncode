@@ -9,21 +9,16 @@ doc = {
         "bool": {
           "must": [
             {
-              "match_phrase": {
-                "event_id": "4661"
-              }
-            },
-            {
               "bool": {
                 "should": [
                   {
-                    "match_phrase": {
-                      "object_type": "SAM_USER"
+                    "wildcard": {
+                      "process_path.keyword": "*\\\\net.exe"
                     }
                   },
                   {
-                    "match_phrase": {
-                      "object_type": "SAM_GROUP"
+                    "wildcard": {
+                      "process_path.keyword": "*\\\\net1.exe"
                     }
                   }
                 ]
@@ -34,52 +29,42 @@ doc = {
                 "should": [
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-512"
+                      "process_command_line.keyword": "* group*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-502"
+                      "process_command_line.keyword": "* localgroup*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-500"
+                      "process_command_line.keyword": "* user*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-505"
+                      "process_command_line.keyword": "* view*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-519"
+                      "process_command_line.keyword": "* share"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-520"
+                      "process_command_line.keyword": "* accounts*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-544"
+                      "process_command_line.keyword": "* use*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-551"
-                    }
-                  },
-                  {
-                    "wildcard": {
-                      "object_name.keyword": "*-555"
-                    }
-                  },
-                  {
-                    "wildcard": {
-                      "object_name.keyword": "*admin*"
+                      "process_command_line.keyword": "* stop *"
                     }
                   }
                 ]
@@ -96,9 +81,9 @@ res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
 tactic = "Discovery"
-technique = "Permission Groups Discovery"
-procedure = "AD Privileged Users or Groups Reconnaissance"
-tech_code = "T1069"
+technique = "Account Discovery"
+procedure = "Net.exe Execution"
+tech_code = "T1087"
 
 action ={
             "Tactic": tactic,
@@ -108,5 +93,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 1)
+es.index(index="represent_5",body = action, id = 17)
 

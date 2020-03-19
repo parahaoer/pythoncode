@@ -7,15 +7,15 @@ doc = {
     "constant_score": {
       "filter": {
         "bool": {
-          "should": [
+          "must": [
             {
-              "match_phrase": {
-                "param3": "net group \"domain admins\" /domain"
+              "match": {
+                "process_command_line": " interface portproxy add v4tov4 *"
               }
             },
             {
-              "match_phrase": {
-                "param3": "net localgroup administrators"
+              "match":{
+                "process_name": "netsh.exe"
               }
             }
           ]
@@ -25,13 +25,14 @@ doc = {
   }
 }
 
+
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tactic = "Discovery"
-technique = "Permission Groups Discovery"
-procedure = "Suspicious Reconnaissance Activity"
-tech_code = "T1069"
+tactic = "Defense Evasion"
+technique = "Connection Proxy"
+procedure = "portproxy reg key"
+tech_code = "T1090"
 
 action ={
             "Tactic": tactic,
@@ -41,5 +42,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 37)
+es.index(index="represent_5",body = action, id = 96)
 

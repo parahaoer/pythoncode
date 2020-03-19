@@ -7,15 +7,31 @@ doc = {
     "constant_score": {
       "filter": {
         "bool": {
-          "should": [
+          "must": [
             {
               "match_phrase": {
-                "param3": "net group \"domain admins\" /domain"
+                "event_id": "5156"
+              }
+            },
+            {
+              "bool": {
+                "should": [
+                  {
+                    "match_phrase": {
+                      "dst_port": "5985"
+                    }
+                  },
+                  {
+                    "match_phrase": {
+                      "dst_port": "5986"
+                    }
+                  }
+                ]
               }
             },
             {
               "match_phrase": {
-                "param3": "net localgroup administrators"
+                "network_layer_id": "44"
               }
             }
           ]
@@ -25,13 +41,16 @@ doc = {
   }
 }
 
+
+
+
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tactic = "Discovery"
-technique = "Permission Groups Discovery"
-procedure = "Suspicious Reconnaissance Activity"
-tech_code = "T1069"
+tactic = "Execution"
+technique = "PowerShell"
+procedure = "Remote PowerShell Session"
+tech_code = "T1086"
 
 action ={
             "Tactic": tactic,
@@ -41,5 +60,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 37)
+es.index(index="represent_5",body = action, id = 26)
 

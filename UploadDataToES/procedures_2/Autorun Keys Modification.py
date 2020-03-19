@@ -10,23 +10,7 @@ doc = {
           "must": [
             {
               "match_phrase": {
-                "event_id": "4661"
-              }
-            },
-            {
-              "bool": {
-                "should": [
-                  {
-                    "match_phrase": {
-                      "object_type": "SAM_USER"
-                    }
-                  },
-                  {
-                    "match_phrase": {
-                      "object_type": "SAM_GROUP"
-                    }
-                  }
-                ]
+                "event_id": "13"
               }
             },
             {
@@ -34,52 +18,47 @@ doc = {
                 "should": [
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-512"
+                      "registry_key_path.keyword": "*\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-502"
+                      "registry_key_path.keyword": "*\\\\software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\RunOnce*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-500"
+                      "registry_key_path.keyword": "*\\\\software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\RunOnceEx*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-505"
+                      "registry_key_path.keyword": "*\\\\software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\RunServices*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-519"
+                      "registry_key_path.keyword": "*\\\\software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\RunServicesOnce*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-520"
+                      "registry_key_path.keyword": "*\\\\software\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Winlogon\\\\Userinit*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-544"
+                      "registry_key_path.keyword": "*\\\\software\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Winlogon\\\\Shell*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-551"
+                      "registry_key_path.keyword": "*\\\\software\\\\Microsoft\\\\Windows NT\\\\CurrentVersion\\\\Windows*"
                     }
                   },
                   {
                     "wildcard": {
-                      "object_name.keyword": "*-555"
-                    }
-                  },
-                  {
-                    "wildcard": {
-                      "object_name.keyword": "*admin*"
+                      "registry_key_path.keyword": "*\\\\software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Explorer\\\\User Shell Folders*"
                     }
                   }
                 ]
@@ -92,13 +71,14 @@ doc = {
   }
 }
 
+
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tactic = "Discovery"
-technique = "Permission Groups Discovery"
-procedure = "AD Privileged Users or Groups Reconnaissance"
-tech_code = "T1069"
+tactic = "Persistence"
+technique = "Registry Run Keys / Startup Folder"
+procedure = "Autorun Keys Modification"
+tech_code = "T1060"
 
 action ={
             "Tactic": tactic,
@@ -108,5 +88,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 1)
+es.index(index="represent_5",body = action, id = 2)
 

@@ -7,15 +7,25 @@ doc = {
     "constant_score": {
       "filter": {
         "bool": {
-          "should": [
+          "must": [
             {
               "match_phrase": {
-                "param3": "net group \"domain admins\" /domain"
+                "event_id": "12"
               }
             },
             {
               "match_phrase": {
-                "param3": "net localgroup administrators"
+                "registry_key_path": "HKU\\*"
+              }
+            },
+            {
+              "wildcard": {
+                "registry_key_path.keyword": "*_Classes\\\\CLSID\\\\*"
+              }
+            },
+            {
+              "wildcard": {
+                "registry_key_path.keyword": "*\\\\TreatAs"
               }
             }
           ]
@@ -28,10 +38,10 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tactic = "Discovery"
-technique = "Permission Groups Discovery"
-procedure = "Suspicious Reconnaissance Activity"
-tech_code = "T1069"
+tactic = "Persistence"
+technique = "Component Object Model Hijacking"
+procedure = "Component Object Model Hijacking"
+tech_code = "T1197"
 
 action ={
             "Tactic": tactic,
@@ -41,5 +51,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 37)
+es.index(index="represent_5",body = action, id = 58)
 

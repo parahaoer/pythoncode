@@ -10,12 +10,17 @@ doc = {
           "should": [
             {
               "match_phrase": {
-                "param3": "net group \"domain admins\" /domain"
+                "param3": "* -NoP -sta -NonI -W Hidden -Enc *"
               }
             },
             {
               "match_phrase": {
-                "param3": "net localgroup administrators"
+                "param3": "* -noP -sta -w 1 -enc *"
+              }
+            },
+            {
+              "match_phrase": {
+                "param3": "* -NoP -NonI -W Hidden -enc *"
               }
             }
           ]
@@ -28,10 +33,10 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tactic = "Discovery"
-technique = "Permission Groups Discovery"
-procedure = "Suspicious Reconnaissance Activity"
-tech_code = "T1069"
+tactic = "Execution"
+technique = "PowerShell"
+procedure = "Detects suspicious powershell command line parameters used in Empire"
+tech_code = "T1086"
 
 action ={
             "Tactic": tactic,
@@ -41,5 +46,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 37)
+es.index(index="represent_5",body = action, id = 6)
 

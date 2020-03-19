@@ -10,12 +10,17 @@ doc = {
           "should": [
             {
               "match_phrase": {
-                "param3": "net group \"domain admins\" /domain"
+                "event_id": "19"
               }
             },
             {
               "match_phrase": {
-                "param3": "net localgroup administrators"
+                "event_id": "20"
+              }
+            },
+            {
+              "match_phrase": {
+                "event_id": "21"
               }
             }
           ]
@@ -28,10 +33,10 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tactic = "Discovery"
-technique = "Permission Groups Discovery"
-procedure = "Suspicious Reconnaissance Activity"
-tech_code = "T1069"
+tactic = "Persistence"
+technique = "Windows Management Instrumentation Event Subscription"
+procedure = "Persistence"
+tech_code = "T1084"
 
 action ={
             "Tactic": tactic,
@@ -41,5 +46,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 37)
+es.index(index="represent_5",body = action, id = 95)
 

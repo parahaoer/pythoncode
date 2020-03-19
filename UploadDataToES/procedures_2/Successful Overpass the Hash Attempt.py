@@ -2,20 +2,30 @@ from elasticsearch import Elasticsearch
 
 es = Elasticsearch('helk-elasticsearch:9200')
 
-doc = {
+doc =  {
   "query": {
     "constant_score": {
       "filter": {
         "bool": {
-          "should": [
+          "must": [
             {
               "match_phrase": {
-                "param3": "net group \"domain admins\" /domain"
+                "event_id": "4624"
               }
             },
             {
               "match_phrase": {
-                "param3": "net localgroup administrators"
+                "logon_type": "9"
+              }
+            },
+            {
+              "match_phrase": {
+                "logon_process_name": "seclogo"
+              }
+            },
+            {
+              "match_phrase": {
+                "logon_authentication_package_name": "Negotiate"
               }
             }
           ]
@@ -28,10 +38,10 @@ doc = {
 res = es.search(index="logs-endpoint-winevent-*",body=doc)
 
 count = res['hits']['total']['value']
-tactic = "Discovery"
-technique = "Permission Groups Discovery"
-procedure = "Suspicious Reconnaissance Activity"
-tech_code = "T1069"
+tactic = "Lateral Movement"
+technique = "Pass the Hash"
+procedure = "Successful Overpass the Hash Attempt"
+tech_code = "T1075"
 
 action ={
             "Tactic": tactic,
@@ -41,5 +51,5 @@ action ={
             "EventCount": count,
         }
 
-es.index(index="represent_5",body = action, id = 37)
+es.index(index="represent_5",body = action, id = 34)
 
