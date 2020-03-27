@@ -1,0 +1,127 @@
+{
+  "took" : 1,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 8,
+    "successful" : 8,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 1,
+      "relation" : "eq"
+    },
+    "max_score" : 29.31042,
+    "hits" : [
+      {
+        "_index" : "logs-endpoint-winevent-security-2019.05.14",
+        "_type" : "_doc",
+        "_id" : "838ad1e3fbad0b2d3336b27edbd93559864b0496",
+        "_score" : 29.31042,
+        "_source" : {
+          "process_id" : 3972,
+          "beat_name" : "WECserver",
+          "record_number" : "110164",
+          "fingerprint_process_command_line_mm3" : 1502342068,
+          "host" : {
+            "name" : "WECserver"
+          },
+          "meta_process_command_line_has_non_ascii" : false,
+          "z_logstash_type" : "wineventlog",
+          "user_name" : "nmartha",
+          "@version" : "1",
+          "z_original_message" : """A new process has been created.
+
+Creator Subject:
+	Security ID:		S-1-5-21-2511471446-1103646877-3980648787-1106
+	Account Name:		nmartha
+	Account Domain:		SHIRE
+	Logon ID:		0xC0CC4
+
+Target Subject:
+	Security ID:		S-1-0-0
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Process Information:
+	New Process ID:		0xf84
+	New Process Name:	C:\Windows\System32\ROUTE.EXE
+	Token Elevation Type:	%%1938
+	Mandatory Label:		S-1-16-8192
+	Creator Process ID:	0x1804
+	Creator Process Name:	C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+	Process Command Line:	"C:\Windows\system32\ROUTE.EXE" print
+
+Token Elevation Type indicates the type of token that was assigned to the new process in accordance with User Account Control policy.
+
+Type 1 is a full token with no privileges removed or groups disabled.  A full token is only used if User Account Control is disabled or if the user is the built-in Administrator account or a service account.
+
+Type 2 is an elevated token with no privileges removed or groups disabled.  An elevated token is used when User Account Control is enabled and the user chooses to start the program using Run as administrator.  An elevated token is also used when an application is configured to always require administrative privilege or to always require maximum privilege, and the user is a member of the Administrators group.
+
+Type 3 is a limited token with administrative privileges removed and administrative groups disabled.  The limited token is used when User Account Control is enabled, the application does not require administrative privilege, and the user does not choose to start the program using Run as administrator.""",
+          "user_principal_id" : "0x0",
+          "keywords" : [
+            "Audit Success"
+          ],
+          "process_parent_name" : "powershell.exe",
+          "process_command_line" : "\"c:\\windows\\system32\\route.exe\" print",
+          "user_sid" : "S-1-5-21-2511471446-1103646877-3980648787-1106",
+          "@timestamp" : "2019-05-14T22:34:11.195Z",
+          "event_id" : 4688,
+          "user_logon_id" : 789700,
+          "provider_guid" : "54849625-5478-4994-a5ba-3e3b0328c30d",
+          "host_name" : "hr001.shire.com",
+          "process_parent_path" : """c:\windows\system32\windowspowershell\v1.0\powershell.exe""",
+          "user_domain" : "shire",
+          "type" : "wineventlog",
+          "process_name" : "route.exe",
+          "source_name" : "Microsoft-Windows-Security-Auditing",
+          "meta_process_command_line_length" : 37,
+          "meta_user_name_is_machine" : "false",
+          "task" : "Process Creation",
+          "user_principal_sid" : "S-1-0-0",
+          "level" : "Information",
+          "log_ingest_timestamp" : "2019-05-14T22:34:11.195Z",
+          "process_token_elevation_type_value" : "TokenElevationTypeLimited",
+          "log_name" : "Security",
+          "process_mandatory_sid" : "S-1-16-8192",
+          "process_token_elevation_type" : "%%1938",
+          "version" : 2,
+          "thread_id" : 6364,
+          "process_path" : """c:\windows\system32\route.exe""",
+          "opcode" : "Info",
+          "process_mandatory_rid_label" : "SECURITY_MANDATORY_MEDIUM_RID",
+          "z_logstash_pipeline" : [
+            "0098",
+            "fingerprint-0099-001",
+            "fingerprint-0099-003",
+            "winlogbeat_6-field_nest_cleanup",
+            "1500",
+            "1521",
+            "1522",
+            "1523_3",
+            "1523_5",
+            "1524_2",
+            "1524_3",
+            "1532",
+            "1541_1",
+            "1541_2",
+            "1542_1",
+            "1543_1",
+            "1544_2",
+            "1544_7",
+            "1545_4",
+            "winevent-hostname-cleanup",
+            "winevent-user_name-is-machine-account",
+            "ruby-8801-0001",
+            "fingerprint-8901-001"
+          ],
+          "beat_version" : "6.7.0",
+          "beat_hostname" : "WECserver"
+        }
+      }
+    ]
+  }
+}
