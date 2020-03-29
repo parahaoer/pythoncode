@@ -30,6 +30,7 @@ search_doc_a = {
 }
 
 search_doc_b = {
+  "size": 10000,
   "query": {
     "bool": {
       "must": [
@@ -49,6 +50,7 @@ search_doc_b = {
 }
 
 search_doc_c = {
+  "size": 10000,
   "query": {
     "bool": {
       "must": [
