@@ -1,3 +1,4 @@
+from functools import cmp_to_key
 from elasticsearch import Elasticsearch
 import datetime
 
@@ -5,6 +6,7 @@ import datetime
 es = Elasticsearch('helk-elasticsearch:9200')
 
 search_doc_a = {
+  "size": 10000,
   "query": {
     "constant_score": {
       "filter": {
@@ -65,17 +67,28 @@ search_doc_c = {
   }
 }
 
-def getTimeStamp(jsonstr):
-  return datetime.datetime.strptime(jsonstr['_source']['@timestamp'], '%Y-%m-%dT%H:%M:%S.%fZ')
+def getTimeStamp(jsonobj):
+  return datetime.datetime.strptime(jsonobj['_source']['@timestamp'], '%Y-%m-%dT%H:%M:%S.%fZ')
 
-def getTimeDifference(jsonstrA, jsonstrB):
-  timeA = getTimeStamp(jsonstrA)
-  timeB = getTimeStamp(jsonstrB)
+def getTimeDifference(jsonobjA, jsonobjB):
+  timeA = getTimeStamp(jsonobjA)
+  timeB = getTimeStamp(jsonobjB)
   if timeA.__gt__(timeB):
     return (timeA - timeB).seconds
   else:
     return (timeB-timeA).seconds
 
+#定义时间比较器，用于排序
+def cmp_datetime(a, b):
+  a_datetime = getTimeStamp(a)
+  b_datetime = getTimeStamp(b)
+
+  if a_datetime.__gt__(b_datetime):
+    return 1
+  elif a_datetime.__lt__(b_datetime):
+    return -1
+  else:
+    return 0
 
 
 res_a = es.search(index="logs-endpoint-winevent-*",body=search_doc_a)
@@ -85,6 +98,11 @@ res_c = es.search(index="logs-endpoint-winevent-*",body=search_doc_c)
 list_a =res_a["hits"]["hits"]
 list_b =res_b["hits"]["hits"]
 list_c =res_c["hits"]["hits"]
+
+# 对list_a、list_b、list_c 列表分别按照时间先后排序
+list_a.sort(key=cmp_to_key(cmp_datetime))
+list_b.sort(key=cmp_to_key(cmp_datetime))
+list_c.sort(key=cmp_to_key(cmp_datetime))
 
 count = 0
 
@@ -102,7 +120,20 @@ for a_doc in list_a:
             list_c.remove(c_doc)
 print(count)
 
+tactic = "Discovery"
+technique = "System Network Configuration Discovery"
+procedure = "12.A.1"
+tech_code = "T1016"
 
+action ={
+            "Tactic": tactic,
+            "Technique": technique,
+            "Tech_code": tech_code,
+            "Procedure": procedure,
+            "EventCount": count,
+        }
+
+es.index(index="represent_5",body = action, id = 122)
 
 
 
