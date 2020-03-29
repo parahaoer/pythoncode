@@ -48,7 +48,10 @@ def cmp_datetime(a, b):
 def getTimeStamp(jsonobj):
   return datetime.datetime.strptime(jsonobj['_source']['@timestamp'], '%Y-%m-%dT%H:%M:%S.%fZ')
 
+# 这种方法比较简便，使用python内置的时间比较器来排序。
 # list.sort(key = lambda x:getTimeStamp(x))
+
+#python3 中 调用cmp_to_key函数来使用自定义比较器
 list.sort(key=cmp_to_key(cmp_datetime))
 for doc in list:
     print(doc['_source']['@timestamp'])
