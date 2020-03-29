@@ -169,5 +169,3 @@ es.index(index="represent_5",body = action, id = 122)
         return count
 
 '''
-def Restrictions():
-    pass
