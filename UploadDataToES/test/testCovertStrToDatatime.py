@@ -6,11 +6,13 @@
 
 import datetime
 
-str_p = '2019-05-14T22:34:10.284Z'
+str_p = "2019-05-14T23:16:11.010Z"
 
-str_q = '2019-05-14T22:34:9.285Z'
+str_q = "2019-05-14T23:16:11.011Z"
 
-dateTime_p = datetime.datetime.strptime(str_p,'%Y-%m-%dT%H:%M:%S.%fZ')
+str_r = "2019-05-14T23:16:09.819Z"
+
+dateTime_p = datetime.datetime.strptime(str_r,'%Y-%m-%dT%H:%M:%S.%fZ')
 
 dateTime_q = datetime.datetime.strptime(str_q,'%Y-%m-%dT%H:%M:%S.%fZ')
 
