@@ -129,10 +129,10 @@ for id in range(len(rule_1_list)):
 
   for a_doc in list_a:
     for b_doc in list_b:
-      if(getTimeDifference(a_doc, b_doc) < 1):
+      if(getTimeDifference(a_doc, b_doc) <= 1):
         for c_doc in list_c:
 
-          if(getTimeDifference(a_doc, c_doc) < 1 and getTimeDifference(b_doc, c_doc) < 1):
+          if(getTimeDifference(a_doc, c_doc) <= 1 and getTimeDifference(b_doc, c_doc) <= 1):
             if(b_doc['_source']['user']['identifier'] == c_doc['_source']['user_sid']):
 
               count = count + 1
