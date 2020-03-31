@@ -107,10 +107,10 @@ for id in range(len(rule_1_list)):
   search_doc_c["query"]["bool"]["must"][1]["match_phrase"]["process_command_line"] = rule_3_list[id]
 
   # 使用json.dump将json对象转换成字符串，然后再打印json字符串。否则打印出的内容都是单引号的。
-  if(id == 21):
-    print(json.dumps(search_doc_a, indent=2))
-    print(json.dumps(search_doc_b, indent=2))
-    print(json.dumps(search_doc_c, indent=2))
+  # if(id == 21):
+  #   print(json.dumps(search_doc_a, indent=2))
+  #   print(json.dumps(search_doc_b, indent=2))
+  #   print(json.dumps(search_doc_c, indent=2))
 
   res_a = es.search(index="logs-endpoint-winevent-*",body=search_doc_a)
   res_b = es.search(index="logs-endpoint-winevent-*",body=search_doc_b)
