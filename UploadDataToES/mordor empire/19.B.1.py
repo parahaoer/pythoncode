@@ -100,7 +100,7 @@ tactic = "Exfiltration"
 technique = "Data Compressed"
 tech_code = "T1002"
 eval_phase = "Exfiltration"
-eval_step = "16.B.1"
+eval_step = "19.B.1"
 
 action = {
   "Tactic": tactic,
