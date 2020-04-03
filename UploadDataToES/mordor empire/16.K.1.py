@@ -99,7 +99,7 @@ print(count)
 tactic = "Discovery"
 technique = "File and Directory Discovery"
 tech_code = "T1083"
-eval_phase = "Lateral Movemet"
+eval_phase = "Lateral Movement"
 eval_step = "16.K.1"
 
 action = {

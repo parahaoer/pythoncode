@@ -54,7 +54,7 @@ rule_3_list = [r'*\\\\ROUTE.EXE\" print', r'*\\\\ipconfig.exe\" /all',
 
 tactic_list = ['Discovery', 'Discovery', 'Discovery', 'Discovery', 'Discovery', 'Discovery', 'Discovery', 'Discovery',
                'Discovery', 'Discovery', 'Discovery', 'Discovery',  'Discovery', 'Lateral Movement', 'Lateral Movement',
-               'Defense Evasion', 'Lateral Movemet', 'Lateral Movemet',  'Discovery', 'Privilege Escalation',
+               'Defense Evasion', 'Lateral Movement', 'Lateral Movement',  'Discovery', 'Privilege Escalation',
                'Discovery', 'Execution']
 
 technique_id_list = ['T1016', 'T1016', 'T1033', 'T1057', 'T1007', 'T1069', 'T1069', 'T1087', 'T1087', 'T1018', 'T1049', 'T1049',
@@ -69,8 +69,8 @@ technique_list = ['System Network Configuration Discovery', 'System Network Conf
 eval_phase_list = ['Initial Discovery', 'Initial Discovery', 'Initial Discovery', 'Initial Discovery', 'Initial Discovery',
                    'Initial Discovery', 'Initial Discovery', 'Initial Discovery', 'Initial Discovery',
                    'Discovery for Lateral Movement', 'Discovery for Lateral Movement', 'Discovery for Lateral Movement', 'Discovery for Lateral Movement',
-                   'Lateral Movemet', 'Lateral Movemet', 'Lateral Movemet', 'Lateral Movemet', 'Lateral Movemet',
-                   'Lateral Movemet', 'Lateral Movemet', 'Lateral Movemet', 'Lateral Movemet']
+                   'Lateral Movement', 'Lateral Movement', 'Lateral Movement', 'Lateral Movement', 'Lateral Movement',
+                   'Lateral Movement', 'Lateral Movement', 'Lateral Movement', 'Lateral Movement']
 eval_step_list= ['12.A.1', '12.A.2', '12.B.1', '12.C.1', '12.D.1', '12.F.1', '12.F.2', '12.G.1', '12.G.2', '13.A.1',
                  '13.B.1', '13.B.2', '13.C.1', '16.B.1', '16.B.1', '16.C.1', '16.D.1', '16.D.1', '16.H.1', '16.I.1', '16.J.1', '16.L.1']
 

@@ -96,10 +96,10 @@ for a_doc in list_a:
 
 print(count)
 
-tactic = "Lateral Movemet"
+tactic = "Lateral Movement"
 technique = "Remote File Copy"
 tech_code = "T1105"
-eval_phase = "Lateral Movemet"
+eval_phase = "Lateral Movement"
 eval_step = "16.G.1"
 
 action = {
