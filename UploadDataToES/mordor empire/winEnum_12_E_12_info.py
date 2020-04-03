@@ -22,10 +22,10 @@ eval_phase_list = ["Initial Discovery", "Initial Discovery", "Initial Discovery"
 eval_step_list= ["12.E.1.6.2", "12.E.1.7", "12.E.1.8", "12.E.1.9.1", "12.E.1.10.1", "12.E.1.10.2", "12.E.1.11", "12.E.1.12"]
 
 
-print((len(rule_3_list)))
-print(len(tactic_list))
-print(len(technique_id_list))
-print(len(technique_list))
-print(len(eval_phase_list))
-print(len(eval_step_list))
+# print((len(rule_3_list)))
+# print(len(tactic_list))
+# print(len(technique_id_list))
+# print(len(technique_list))
+# print(len(eval_phase_list))
+# print(len(eval_step_list))
 
