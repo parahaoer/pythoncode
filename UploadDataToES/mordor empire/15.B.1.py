@@ -41,7 +41,7 @@ search_doc_b = {
         },
         {
           "match_phrase": {
-            "powershell.command.name": "Get-Content"
+            "powershell.param.value": "Get-Content FileSystem::\\\\HFDC01\\IT\\it_tasks.txt"
           }
         }
       ]

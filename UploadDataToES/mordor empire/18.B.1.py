@@ -41,7 +41,7 @@ search_doc_b = {
         },
         {
           "match_phrase": {
-            "powershell.command.name": "Copy-Item"
+            "powershell.param.value": "Copy-Item FileSystem::\\\\HFDC01\\IT\\recipe.txt C:\\\"$\"Recycle.Bin\\recipe.txt"
           }
         }
       ]
