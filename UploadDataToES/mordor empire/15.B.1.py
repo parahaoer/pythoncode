@@ -1,3 +1,16 @@
+'''
+对使用powershell命令作为shell命令的step, 至少有如下4条日志：
+                        1）event_id=800, ParameterBinding(Invoke-Expression): name=\"Command\"; value=\"Get-Content FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\"
+                          对应检测规则 为 param3 包含 name=\"Command\"; value=\"Get-Content FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\"
+                        2）event_id=4103, ParameterBinding(Invoke-Expression): name=\"Command\"; value=\"Get-Content FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\"
+                          对应检测规则为 powershell.param.value 为 Get-Content FileSystem::\\\\HFDC01\\IT\\it_tasks.txt
+                        3）event_id=800, ParameterBinding(Get-Content): name=\"Path\"; value=\"FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\"
+                          对应检测规则为 param3 包含 name=\"Path\"; value=\"FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\"
+                        4) event_id=4103, ParameterBinding(Get-Content): name=\"Path\"; value=\"FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\"
+                          对应检测规则为 powershell.command.name 为 Get-Content
+'''
+
+
 from functools import cmp_to_key
 from elasticsearch import Elasticsearch
 import datetime
@@ -19,7 +32,7 @@ search_doc_a = {
             },
             {
               "match_phrase": {
-                "param3": "ParameterBinding(Get-Content): name=\"Path\"; value=\"FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\""
+                "param3": "name=\"Command\"; value=\"Get-Content FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\""
               }
             }
           ]
