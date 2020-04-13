@@ -1,7 +1,7 @@
 from functools import cmp_to_key
+from elasticsearch import Elasticsearch
 import datetime
 
-from elasticsearch import Elasticsearch
 
 es = Elasticsearch('helk-elasticsearch:9200')
 
@@ -19,7 +19,7 @@ search_doc_a = {
             },
             {
               "match_phrase": {
-                "param3": "ParameterBinding(Copy-Item): name=\"Path\"; value=\"FileSystem::\\\\HFDC01\\IT\\recipe.txt\""
+                "param3": "ParameterBinding(Get-Content): name=\"Path\"; value=\"FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\""
               }
             }
           ]
@@ -41,7 +41,7 @@ search_doc_b = {
         },
         {
           "match_phrase": {
-            "powershell.command.name": "Copy-Item"
+            "powershell.command.name": "Get-Content"
           }
         }
       ]
@@ -95,11 +95,12 @@ for a_doc in list_a:
       list_b.remove(b_doc)
 
 print(count)
-tactic = "Collection"
-technique = "Data Staged"
-tech_code = "T1074"
-eval_phase = "Collection"
-eval_step = "18.B.1"
+
+tactic = "Credential Access"
+technique = "Credentials in Files"
+tech_code = "T1081"
+eval_phase = "Credential Access"
+eval_step = "15.B.1"
 
 action = {
   "Tactic": tactic,
@@ -110,4 +111,4 @@ action = {
   "EventCount": count,
 }
 
-es.index(index="represent_7", body=action, id=29)
+es.index(index="represent_7", body=action, id=43)
