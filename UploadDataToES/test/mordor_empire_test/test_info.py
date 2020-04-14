@@ -1,0 +1,1 @@
+event600_list = ["Registry", "Alias", "Environment", "FileSystem", "Function", "Variable"]
