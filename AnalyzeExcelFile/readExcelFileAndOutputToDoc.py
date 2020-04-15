@@ -5,7 +5,7 @@ from docx.shared import Inches
 # 新建doc文档
 doc = docx.Document()
 
-# open the .xls file
+# open the .xlsx file
 book = xlrd.open_workbook('resource/helk dashboard visualization_补充完整.xlsx')
 
 sheet1 = book.sheets()[0]
@@ -29,6 +29,7 @@ for rowNum in range(1, sheet1.nrows):
         doc.add_paragraph('该visualization的类型为' + visualization_type + ',其作用是' + description + '其界面如下图所示：')
         pic_path = 'resource/pic/' + visualization + '.png'
         try:
+            # 指定图片宽度为 5英寸
             doc.add_picture(pic_path, width=Inches(5))
         except FileNotFoundError:
             print(pic_path + "不存在")
