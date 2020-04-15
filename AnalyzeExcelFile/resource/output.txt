@@ -1,0 +1,170 @@
+ALL-MITRE-ATTACK
+mitre_attack_select
+该visualization的类型为Controls,其作用是指定Matrix来过滤数据或者指定Platform来过滤数据
+mitre_attack_techniques_matrices
+该visualization的类型为Metric,其作用是按照matrix分组，统计每个matrix有多少个不同的technique
+mitre_attack_permissions_required
+该visualization的类型为Pie,其作用是按照permissions_required分组，统计每个permissions_required有多少个不同的technique
+mitre_attack_tactic_techniques
+该visualization的类型为Data Table,其作用是按照tactic分组，统计每个tactic有多少个不同的technique
+mitre_attack_technique_data_sources_cloud
+该visualization的类型为Tag Cloud,其作用是按照data_sources分组，统计每个data_sources有多少个不同的technique
+mitre_attack_software_groups
+该visualization的类型为Horizontal Bar,其作用是按照software分组，统计每个software有多少个不同的group
+mitre_attack_technique_data_sources
+该visualization的类型为Data Table,其作用是按照technique分组，统计每个technique有多少个不同的data_sources
+mitre_attack_data_sources_techniques
+该visualization的类型为Data Table,其作用是按照data_sources分组，统计每个data_sources有多少个不同的technique
+mitre_attack_mitigation_technique
+该visualization的类型为Pie,其作用是按照mitigation分组，统计每个mitigation有多少个不同的technique
+mitre_attack_groups_techniques
+该visualization的类型为Data Table,其作用是按照group分组，统计每个group有多少个不同的technique
+mitre_attack_discover
+该visualization的类型为Search,其作用是查找索引模式mitre-attack-*中所有索引最近一年的数据。
+Global_Dashboard
+Global_Count
+该visualization的类型为Metric,其作用是统计索引模式logs-*中所有索引共多少条记录
+Global_EventIDs
+该visualization的类型为Pie,其作用是按照event_id分组，统计每个event_id有多少条记录
+Global_Host_Name
+该visualization的类型为Pie,其作用是按照host_name分组，统计每个host_name有多少条记录
+Global_User_Name
+该visualization的类型为Pie,其作用是按照user_name分组，统计每个user_name有多少条记录
+Global_Process_Name
+该visualization的类型为Data Table,其作用是按照process_name分组，统计每个process_name有多少条记录
+Global_process_command_line
+该visualization的类型为Data Table,其作用是按照process_command_line分组，统计每个process_command_line有多少条记录
+Global_dst_ip
+该visualization的类型为Data Table,其作用是按照dst_ip_addr分组，统计每个dst_ip_addr有多少条记录
+Global_Logon_Type
+该visualization的类型为Data Table,其作用是按照logon_type分组，统计每个logon_type有多少条记录
+Global_Hashes_Sha256
+该visualization的类型为Data Table,其作用是按照hash_sha256分组，统计每个hash_sha256有多少条记录
+Global_Discover
+该visualization的类型为Search,其作用是查找索引模式logs-*中所有索引最近一年的数据。
+Host Investigation Dashboard
+Sysmon_Timelion_NetworkEvents_byUser
+该visualization的类型为Timelion,其作用是对索引logs-endpoint-winevent-sysmon*中event_id=3的事件，按照user_account分组，并对每一个user_account按照时间序列来显示其记录条数
+Sysmon_Timelion_ProcessEvents_byUser
+该visualization的类型为Timelion,其作用是对索引logs-endpoint-winevent-sysmon*中event_id=1的事件，按照user_account分组，并对每一个user_account按照时间序列来显示其记录条数
+Sysmon_ExecutedCommands
+该visualization的类型为Search,其作用是event_id:1 AND (process_parent_name:\"CmD.exe\" OR process_parent_name:\"powershell.exe\" OR process_parent_name:\"wscript.exe\" OR process_parent_name:\"cscript.exe\")
+Sysmon_Process Creation - EventId1
+该visualization的类型为Search,其作用是event_id:1
+Sysmon_Public Network Connections - EventId 3
+该visualization的类型为Search,其作用是event_id:3 AND (NOT dst_ip_addr: \"127.0.0.1\" AND NOT dst_ip_addr:[10.0.0.0 TO 10.255.255.255] AND NOT dst_ip_addr:[192.168.0.0 TO 192.168.255.255] AND NOT dst_ip_addr:[172.16.0.0 TO 172.31.255.255])
+Sysmon_File Creation - EventId 11
+该visualization的类型为Search,其作用是event_id:11
+Sysmon_Downloads-EventId 15
+该visualization的类型为Search,其作用是source_name: \"Microsoft-Windows-Sysmon\" AND event_id:15
+Sysmon_Registry Events
+该visualization的类型为Search,其作用是event_id:12 OR event_id:13 OR event_id:14
+Sysmon_WMI Subscription Events
+该visualization的类型为Search,其作用是source_name: \"Microsoft-Windows-Sysmon\" AND (event_id:19 OR event_id:20 OR event_id:21)
+windows_login_events
+该visualization的类型为Search,其作用是source_name: \"Microsoft-Windows-Security-Auditing\" AND (event_id:[4624 TO 4625] OR event_id:4634)
+Sysmon_Invalid Drivers
+该visualization的类型为Search,其作用是event_id: 6
+Sysmon_Private Network Connections - EventId 3
+该visualization的类型为Search,其作用是event_id:3 AND (dst_ip_addr:[10.0.0.0 TO 10.255.255.255] OR dst_ip_addr:[192.168.0.0 TO 192.168.255.255] OR dst_ip_addr:[172.16.0.0 TO 172.31.255.255])
+MITRE-ATTACK-GROUPS
+mitre_attack_group_select
+该visualization的类型为Controls,其作用是指定group、techniques来过滤数据， 或者指定Matrix过滤数据
+mitre_attack_groups_matrices
+该visualization的类型为Metric,其作用是按照matrix分组，统计每个matrix有多少个不同的group
+mitre_attack_groups_techniques
+该visualization的类型为Data Table,其作用是按照group分组，统计每个group有多少个不同的technique
+mitre_attack_groups_software_cloud
+该visualization的类型为Tag Cloud,其作用是按照software分组，统计每个software有多少个不同的group
+mitre_attack_groups_techniques_bar
+该visualization的类型为Horizontal Bar,其作用是按照techniques分组，统计每个techniques有多少个不同的group
+mitre_attack_groups_tactics
+该visualization的类型为Data Table,其作用是按照tactic分组，统计每个tactic有多少个不同的group
+mitre_attack_techniques_groups
+该visualization的类型为Data Table,其作用是按照technique分组，统计每个technique有多少个不同的group
+mitre_attack_group_relationship
+该visualization的类型为Data Table,其作用是按照relationship分组，统计每个relationship有多少个不同的group
+mitre_attack_discover
+该visualization的类型为Search,其作用是查找索引模式mitre-attack-*中所有索引最近一年的数据。
+Process Investigation
+Sysmon_Timelion_ProcessEvents_byProcessGuid
+该visualization的类型为Timelion,其作用是对索引logs-endpoint-winevent-sysmon*中的事件，按照process_guid分组，并对每一个process_guid按照时间序列来显示其记录条数
+Sysmon_Process Creation - EventId1
+该visualization的类型为Search,其作用是event_id:1
+Sysmon_all Network Connections - EventId 3
+该visualization的类型为Search,其作用是event_id:3
+Sysmon_Downloads-EventId 15
+该visualization的类型为Search,其作用是source_name: \"Microsoft-Windows-Sysmon\" AND event_id:15
+Sysmon_Registry Events
+该visualization的类型为Search,其作用是event_id:12 OR event_id:13 OR event_id:14
+Sysmon_File Creation - EventId 11
+该visualization的类型为Search,其作用是event_id:11
+Sysmon_Named Pipes-EventId 17,18
+该visualization的类型为Search,其作用是event_id:17 OR event_id:18
+Sysmon_All_events
+该visualization的类型为Search,其作用是检索索引模式logs-endpoint-winevent-sysmon-*中所有索引的数据
+Sysmon_Dashboard
+Sysmon_Count
+该visualization的类型为Metric,其作用是统计索引模式logs-endpoint-winevent-sysmon-*中所有索引共有多少条记录
+Sysmon_EventIDs
+该visualization的类型为Pie,其作用是按照event_id分组，统计每个event_id有多少条记录
+Sysmon_Host_Name
+该visualization的类型为Pie,其作用是按照host_name分组，统计每个host_name有多少条记录
+Sysmon_User_Name
+该visualization的类型为Pie,其作用是按照user_name分组，统计每个user_name有多少条记录
+Sysmon_Process_Name
+该visualization的类型为Data Table,其作用是按照process_name分组，统计每个process_name有多少条记录
+Sysmon_Pipe_Name
+该visualization的类型为Data Table,其作用是按照pipe_name分组，统计每个pipe_name有多少条记录
+Sysmon_File_Name
+该visualization的类型为Data Table,其作用是按照file_name分组，统计每个file_name有多少条记录
+Sysmon_Process_Id
+该visualization的类型为Data Table,其作用是按照process_id分组，统计每个process_id有多少条记录
+Sysmon_module_loaded
+该visualization的类型为Data Table,其作用是按照module_loaded分组，统计每个module_loaded有多少条记录
+Sysmon_Registry_Key_Path
+该visualization的类型为Data Table,其作用是按照registry_key_path分组，统计每个registry_key_path有多少条记录
+Sysmon_Unique_module_loaded
+该visualization的类型为Data Table,其作用是按照hash_sha256, module_loaded分组， 计算每个分组有多少条记录、多少个不同的module_loaded、多少个不同的host_name
+Sysmon_Unique_Process_Name
+该visualization的类型为Data Table,其作用是按照hash_sha256, process_name分组， 计算每个分组有多少条记录、多少个不同的process_name、多少个不同的host_name
+Sysmon_Discover
+该visualization的类型为Data Table,其作用是检索索引模式logs-endpoint-winevent-sysmon-*中所有索引的记录
+Sysmon_Network_Dashboard
+Sysmon_Network_Count
+该visualization的类型为Metric,其作用是统计索引模式logs-endpoint-winevent-sysmon-*中所有索引的event_id=3的记录的数量
+Sysmon_Network_Host_Name
+该visualization的类型为Pie,其作用是对event_id=3的记录，按照host_name分组， 统计每个host_name有多少条记录
+Sysmon_Network_City_Name
+该visualization的类型为Pie,其作用是对event_id=3的记录，按照meta_dst_ip_geo分组， 统计每个meta_dst_ip_geo有多少条记录
+Sysmon_Network_dst_ip
+该visualization的类型为Pie,其作用是对event_id=3的记录，按照dst_ip_addr分组， 统计每个dst_ip_addr有多少条记录
+Sysmon_Network_User_Name
+该visualization的类型为Data Table,其作用是对event_id=3的记录，按照user_name分组， 统计每个user_name有多少条记录
+Sysmon_Network_Process_Name
+该visualization的类型为Data Table,其作用是对event_id=3的记录，按照process_name分组， 统计每个process_name有多少条记录
+Sysmon_Network_Port_Dst_Number
+该visualization的类型为Data Table,其作用是对event_id=3的记录，按照dst_port分组， 统计每个dst_port有多少条记录
+Sysmon_Network_Country_Name
+该visualization的类型为Data Table,其作用是对event_id=3的记录，按照meta_dst_ip_geo.country_name分组， 统计每个meta_dst_ip_geo.country_name有多少条记录
+Sysmon_Network_Discover
+该visualization的类型为Search,其作用是检索索引模式logs-endpoint-winevent-sysmon-*中所有索引的event_id=3的记录
+User Investigation Dashboard
+Sysmon_Eventcount-per-host
+该visualization的类型为Data Table,其作用是按照beat_hostname分组，统计每个beat_hostname有多少条记录
+Sysmon_Timelion_bySystem
+该visualization的类型为Timelion,其作用是对索引logs-endpoint-winevent-sysmon*中的事件，按照beat_hostname分组，并对每一个beat_hostname按照时间序列来显示其记录条数
+Sysmon_ExecutedCommands
+该visualization的类型为Search,其作用是event_id:1 AND (process_parent_name:\"CmD.exe\" OR process_parent_name:\"powershell.exe\" OR process_parent_name:\"wscript.exe\" OR process_parent_name:\"cscript.exe\")
+Sysmon_Process Creation - EventId1
+该visualization的类型为Search,其作用是event_id:1
+Sysmon_Public Network Connections - EventId 3
+该visualization的类型为Search,其作用是event_id:3 AND (NOT dst_ip_addr: \"127.0.0.1\" AND NOT dst_ip_addr:[10.0.0.0 TO 10.255.255.255] AND NOT dst_ip_addr:[192.168.0.0 TO 192.168.255.255] AND NOT dst_ip_addr:[172.16.0.0 TO 172.31.255.255])
+Sysmon_File Creation - EventId 11
+该visualization的类型为Search,其作用是event_id:11
+Sysmon_Downloads-EventId 15
+该visualization的类型为Search,其作用是source_name: \"Microsoft-Windows-Sysmon\" AND event_id:15
+Sysmon_Registry Events
+该visualization的类型为Search,其作用是event_id:12 OR event_id:13 OR event_id:14
+windows_login_events
+该visualization的类型为Search,其作用是source_name: \"Microsoft-Windows-Security-Auditing\" AND (event_id:[4624 TO 4625] OR event_id:4634)
