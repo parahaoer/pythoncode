@@ -14,13 +14,14 @@ def timedTask():
     scheduler = sched.scheduler(time.time, time.sleep)
     # 增加调度任务
     scheduler.enter(5, 0, timedTask)
+    print("wait 5s")
     task()
     # 运行任务
     scheduler.run()
 
 # 定时任务
 def task():
-    execRule()
+    execRule('mordor_empire')
 
 if __name__ == '__main__':
     timedTask()
