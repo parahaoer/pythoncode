@@ -19,7 +19,7 @@ search_doc_a = {
             },
             {
               "match_phrase": {
-                "param3": "ParameterBinding(Copy-Item): name=\"Path\"; value=\"FileSystem::\\\\HFDC01\\IT\\recipe.txt\""
+                "param3": "name=\"Command\"; value=\"Copy-Item FileSystem::\\\\HFDC01\\IT\\recipe.txt C:\\\"$\"Recycle.Bin\\recipe.txt\""
               }
             }
           ]
@@ -41,7 +41,7 @@ search_doc_b = {
         },
         {
           "match_phrase": {
-            "powershell.command.name": "Copy-Item"
+            "powershell.param.value": "Copy-Item FileSystem::\\\\HFDC01\\IT\\recipe.txt C:\\\"$\"Recycle.Bin\\recipe.txt"
           }
         }
       ]

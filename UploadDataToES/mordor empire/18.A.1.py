@@ -41,7 +41,7 @@ search_doc_b = {
         },
         {
           "match_phrase": {
-            "powershell.command.name": "Get-Childitem"
+            "powershell.param.value": "Get-Childitem -Path FileSystem::\\\\HFDC01\\IT\\"
           }
         }
       ]
