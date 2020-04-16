@@ -162,3 +162,584 @@ Sysmon_File Creation - EventId 11
 Sysmon_Downloads-EventId 15
 Sysmon_Registry Events
 windows_login_events
+mitre_attack_select
+mitre_attack_techniques_matrices
+mitre_attack_permissions_required
+mitre_attack_tactic_techniques
+mitre_attack_technique_data_sources_cloud
+mitre_attack_software_groups
+mitre_attack_technique_data_sources
+mitre_attack_data_sources_techniques
+mitre_attack_mitigation_technique
+mitre_attack_groups_techniques
+mitre_attack_discover
+Global_Count
+Global_EventIDs
+Global_Host_Name
+Global_User_Name
+Global_Process_Name
+Global_process_command_line
+Global_dst_ip
+Global_Logon_Type
+Global_Hashes_Sha256
+Global_Process_Parent_Name
+Global_Service_Name
+Global_Discover
+Sysmon_Timelion_NetworkEvents_byUser
+Sysmon_Timelion_ProcessEvents_byUser
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_WMI Subscription Events
+windows_login_events
+Sysmon_Private Network Connections - EventId 3
+mitre_attack_group_select
+mitre_attack_groups_matrices
+mitre_attack_groups_techniques
+mitre_attack_groups_software_cloud
+mitre_attack_groups_techniques_bar
+mitre_attack_groups_tactics
+mitre_attack_techniques_groups
+mitre_attack_group_relationship
+mitre_attack_discover
+Sysmon_Process Creation - EventId1
+Sysmon_all Network Connections - EventId 3
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_File Creation - EventId 11
+Sysmon_Named Pipes-EventId 17,18
+Sysmon_All_events
+Sysmon_Count
+Sysmon_EventIDs
+Sysmon_Host_Name
+Sysmon_User_Name
+Sysmon_Process_Name
+Sysmon_Process_Command_Line
+Sysmon_Process_Parent_Name
+Sysmon_Process_Parent_Command_Line
+Sysmon_File_Name
+Sysmon_Registry_Key_Path
+Sysmon_module_loaded
+Sysmon_Pipe_Name
+Sysmon_Unique_module_loaded
+Sysmon_Unique_Process_Name
+Sysmon_Discover
+Sysmon_Network_Count
+Sysmon_Network_Host_Name
+Sysmon_Network_City_Name
+Sysmon_Network_dst_ip
+Sysmon_Network_User_Name
+Sysmon_Network_Process_Name
+Sysmon_Network_Port_Dst_Number
+Sysmon_Network_Country_Name
+Sysmon_Network_Discover
+Sysmon_Eventcount-per-host
+Sysmon_Timelion_bySystem
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+windows_login_events
+mitre_attack_select
+mitre_attack_techniques_matrices
+mitre_attack_permissions_required
+mitre_attack_tactic_techniques
+mitre_attack_technique_data_sources_cloud
+mitre_attack_software_groups
+mitre_attack_technique_data_sources
+mitre_attack_data_sources_techniques
+mitre_attack_mitigation_technique
+mitre_attack_groups_techniques
+mitre_attack_discover
+Global_Count
+Global_EventIDs
+Global_Host_Name
+Global_User_Name
+Global_Process_Name
+Global_process_command_line
+Global_dst_ip
+Global_Logon_Type
+Global_Hashes_Sha256
+Global_Process_Parent_Name
+Global_Service_Name
+Global_Discover
+Sysmon_Timelion_NetworkEvents_byUser
+Sysmon_Timelion_ProcessEvents_byUser
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_WMI Subscription Events
+windows_login_events
+Sysmon_Private Network Connections - EventId 3
+mitre_attack_group_select
+mitre_attack_groups_matrices
+mitre_attack_groups_techniques
+mitre_attack_groups_software_cloud
+mitre_attack_groups_techniques_bar
+mitre_attack_groups_tactics
+mitre_attack_techniques_groups
+mitre_attack_group_relationship
+mitre_attack_discover
+Sysmon_Process Creation - EventId1
+Sysmon_all Network Connections - EventId 3
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_File Creation - EventId 11
+Sysmon_Named Pipes-EventId 17,18
+Sysmon_All_events
+Sysmon_Count
+Sysmon_EventIDs
+Sysmon_Host_Name
+Sysmon_User_Name
+Sysmon_Process_Name
+Sysmon_Process_Command_Line
+Sysmon_Process_Parent_Name
+Sysmon_Process_Parent_Command_Line
+Sysmon_File_Name
+Sysmon_Registry_Key_Path
+Sysmon_module_loaded
+Sysmon_Pipe_Name
+Sysmon_Unique_module_loaded
+Sysmon_Unique_Process_Name
+Sysmon_Discover
+Sysmon_Network_Count
+Sysmon_Network_Host_Name
+Sysmon_Network_City_Name
+Sysmon_Network_dst_ip
+Sysmon_Network_User_Name
+Sysmon_Network_Process_Name
+Sysmon_Network_Port_Dst_Number
+Sysmon_Network_Country_Name
+Sysmon_Network_Discover
+Sysmon_Eventcount-per-host
+Sysmon_Timelion_bySystem
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+windows_login_events
+mitre_attack_select
+mitre_attack_techniques_matrices
+mitre_attack_permissions_required
+mitre_attack_tactic_techniques
+mitre_attack_technique_data_sources_cloud
+mitre_attack_software_groups
+mitre_attack_technique_data_sources
+mitre_attack_data_sources_techniques
+mitre_attack_mitigation_technique
+mitre_attack_groups_techniques
+mitre_attack_discover
+Global_Count
+Global_EventIDs
+Global_Host_Name
+Global_User_Name
+Global_Process_Name
+Global_process_command_line
+Global_dst_ip
+Global_Logon_Type
+Global_Hashes_Sha256
+Global_Process_Parent_Name
+Global_Service_Name
+Global_Discover
+Sysmon_Timelion_NetworkEvents_byUser
+Sysmon_Timelion_ProcessEvents_byUser
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_WMI Subscription Events
+windows_login_events
+Sysmon_Private Network Connections - EventId 3
+mitre_attack_group_select
+mitre_attack_groups_matrices
+mitre_attack_groups_techniques
+mitre_attack_groups_software_cloud
+mitre_attack_groups_techniques_bar
+mitre_attack_groups_tactics
+mitre_attack_techniques_groups
+mitre_attack_group_relationship
+mitre_attack_discover
+Sysmon_Process Creation - EventId1
+Sysmon_all Network Connections - EventId 3
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_File Creation - EventId 11
+Sysmon_Named Pipes-EventId 17,18
+Sysmon_All_events
+Sysmon_Count
+Sysmon_EventIDs
+Sysmon_Host_Name
+Sysmon_User_Name
+Sysmon_Process_Name
+Sysmon_Process_Command_Line
+Sysmon_Process_Parent_Name
+Sysmon_Process_Parent_Command_Line
+Sysmon_File_Name
+Sysmon_Registry_Key_Path
+Sysmon_module_loaded
+Sysmon_Pipe_Name
+Sysmon_Unique_module_loaded
+Sysmon_Unique_Process_Name
+Sysmon_Discover
+Sysmon_Network_Count
+Sysmon_Network_Host_Name
+Sysmon_Network_City_Name
+Sysmon_Network_dst_ip
+Sysmon_Network_User_Name
+Sysmon_Network_Process_Name
+Sysmon_Network_Port_Dst_Number
+Sysmon_Network_Country_Name
+Sysmon_Network_Discover
+Sysmon_Eventcount-per-host
+Sysmon_Timelion_bySystem
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+windows_login_events
+mitre_attack_select
+mitre_attack_techniques_matrices
+mitre_attack_permissions_required
+mitre_attack_tactic_techniques
+mitre_attack_technique_data_sources_cloud
+mitre_attack_software_groups
+mitre_attack_technique_data_sources
+mitre_attack_data_sources_techniques
+mitre_attack_mitigation_technique
+mitre_attack_groups_techniques
+mitre_attack_discover
+Global_Count
+Global_EventIDs
+Global_Host_Name
+Global_User_Name
+Global_Process_Name
+Global_process_command_line
+Global_dst_ip
+Global_Logon_Type
+Global_Hashes_Sha256
+Global_Process_Parent_Name
+Global_Service_Name
+Global_Discover
+Sysmon_Timelion_NetworkEvents_byUser
+Sysmon_Timelion_ProcessEvents_byUser
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_WMI Subscription Events
+windows_login_events
+Sysmon_Private Network Connections - EventId 3
+mitre_attack_group_select
+mitre_attack_groups_matrices
+mitre_attack_groups_techniques
+mitre_attack_groups_software_cloud
+mitre_attack_groups_techniques_bar
+mitre_attack_groups_tactics
+mitre_attack_techniques_groups
+mitre_attack_group_relationship
+mitre_attack_discover
+Sysmon_Process Creation - EventId1
+Sysmon_all Network Connections - EventId 3
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_File Creation - EventId 11
+Sysmon_Named Pipes-EventId 17,18
+Sysmon_All_events
+Sysmon_Count
+Sysmon_EventIDs
+Sysmon_Host_Name
+Sysmon_User_Name
+Sysmon_Process_Name
+Sysmon_Process_Command_Line
+Sysmon_Process_Parent_Name
+Sysmon_Process_Parent_Command_Line
+Sysmon_File_Name
+Sysmon_Registry_Key_Path
+Sysmon_module_loaded
+Sysmon_Pipe_Name
+Sysmon_Unique_module_loaded
+Sysmon_Unique_Process_Name
+Sysmon_Discover
+Sysmon_Network_Count
+Sysmon_Network_Host_Name
+Sysmon_Network_City_Name
+Sysmon_Network_dst_ip
+Sysmon_Network_User_Name
+Sysmon_Network_Process_Name
+Sysmon_Network_Port_Dst_Number
+Sysmon_Network_Country_Name
+Sysmon_Network_Discover
+Sysmon_Eventcount-per-host
+Sysmon_Timelion_bySystem
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+windows_login_events
+mitre_attack_select
+mitre_attack_techniques_matrices
+mitre_attack_permissions_required
+mitre_attack_tactic_techniques
+mitre_attack_technique_data_sources_cloud
+mitre_attack_software_groups
+mitre_attack_technique_data_sources
+mitre_attack_data_sources_techniques
+mitre_attack_mitigation_technique
+mitre_attack_groups_techniques
+mitre_attack_discover
+Global_Count
+Global_EventIDs
+Global_Host_Name
+Global_User_Name
+Global_Process_Name
+Global_process_command_line
+Global_dst_ip
+Global_Logon_Type
+Global_Hashes_Sha256
+Global_Process_Parent_Name
+Global_Service_Name
+Global_Discover
+Sysmon_Timelion_NetworkEvents_byUser
+Sysmon_Timelion_ProcessEvents_byUser
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_WMI Subscription Events
+windows_login_events
+Sysmon_Private Network Connections - EventId 3
+mitre_attack_group_select
+mitre_attack_groups_matrices
+mitre_attack_groups_techniques
+mitre_attack_groups_software_cloud
+mitre_attack_groups_techniques_bar
+mitre_attack_groups_tactics
+mitre_attack_techniques_groups
+mitre_attack_group_relationship
+mitre_attack_discover
+Sysmon_Process Creation - EventId1
+Sysmon_all Network Connections - EventId 3
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_File Creation - EventId 11
+Sysmon_Named Pipes-EventId 17,18
+Sysmon_All_events
+Sysmon_Count
+Sysmon_EventIDs
+Sysmon_Host_Name
+Sysmon_User_Name
+Sysmon_Process_Name
+Sysmon_Process_Command_Line
+Sysmon_Process_Parent_Name
+Sysmon_Process_Parent_Command_Line
+Sysmon_File_Name
+Sysmon_Registry_Key_Path
+Sysmon_module_loaded
+Sysmon_Pipe_Name
+Sysmon_Unique_module_loaded
+Sysmon_Unique_Process_Name
+Sysmon_Discover
+Sysmon_Network_Count
+Sysmon_Network_Host_Name
+Sysmon_Network_City_Name
+Sysmon_Network_dst_ip
+Sysmon_Network_User_Name
+Sysmon_Network_Process_Name
+Sysmon_Network_Port_Dst_Number
+Sysmon_Network_Country_Name
+Sysmon_Network_Discover
+Sysmon_Eventcount-per-host
+Sysmon_Timelion_bySystem
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+windows_login_events
+mitre_attack_select
+mitre_attack_techniques_matrices
+mitre_attack_permissions_required
+mitre_attack_tactic_techniques
+mitre_attack_technique_data_sources_cloud
+mitre_attack_software_groups
+mitre_attack_technique_data_sources
+mitre_attack_data_sources_techniques
+mitre_attack_mitigation_technique
+mitre_attack_groups_techniques
+mitre_attack_discover
+Global_Count
+Global_EventIDs
+Global_Host_Name
+Global_User_Name
+Global_Process_Name
+Global_process_command_line
+Global_dst_ip
+Global_Logon_Type
+Global_Hashes_Sha256
+Global_Process_Parent_Name
+Global_Service_Name
+Global_Discover
+Sysmon_Timelion_NetworkEvents_byUser
+Sysmon_Timelion_ProcessEvents_byUser
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_WMI Subscription Events
+windows_login_events
+Sysmon_Private Network Connections - EventId 3
+mitre_attack_group_select
+mitre_attack_groups_matrices
+mitre_attack_groups_techniques
+mitre_attack_groups_software_cloud
+mitre_attack_groups_techniques_bar
+mitre_attack_groups_tactics
+mitre_attack_techniques_groups
+mitre_attack_group_relationship
+mitre_attack_discover
+Sysmon_Process Creation - EventId1
+Sysmon_all Network Connections - EventId 3
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_File Creation - EventId 11
+Sysmon_Named Pipes-EventId 17,18
+Sysmon_All_events
+Sysmon_Count
+Sysmon_EventIDs
+Sysmon_Host_Name
+Sysmon_User_Name
+Sysmon_Process_Name
+Sysmon_Process_Command_Line
+Sysmon_Process_Parent_Name
+Sysmon_Process_Parent_Command_Line
+Sysmon_File_Name
+Sysmon_Registry_Key_Path
+Sysmon_module_loaded
+Sysmon_Pipe_Name
+Sysmon_Unique_module_loaded
+Sysmon_Unique_Process_Name
+Sysmon_Discover
+Sysmon_Network_Count
+Sysmon_Network_Host_Name
+Sysmon_Network_City_Name
+Sysmon_Network_dst_ip
+Sysmon_Network_User_Name
+Sysmon_Network_Process_Name
+Sysmon_Network_Port_Dst_Number
+Sysmon_Network_Country_Name
+Sysmon_Network_Discover
+Sysmon_Eventcount-per-host
+Sysmon_Timelion_bySystem
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+windows_login_events
+mitre_attack_select
+mitre_attack_techniques_matrices
+mitre_attack_permissions_required
+mitre_attack_tactic_techniques
+mitre_attack_technique_data_sources_cloud
+mitre_attack_software_groups
+mitre_attack_technique_data_sources
+mitre_attack_data_sources_techniques
+mitre_attack_mitigation_technique
+mitre_attack_groups_techniques
+mitre_attack_discover
+Global_Count
+Global_EventIDs
+Global_Host_Name
+Global_User_Name
+Global_Process_Name
+Global_process_command_line
+Global_dst_ip
+Global_Logon_Type
+Global_Hashes_Sha256
+Global_Process_Parent_Name
+Global_Service_Name
+Global_Discover
+Sysmon_Timelion_NetworkEvents_byUser
+Sysmon_Timelion_ProcessEvents_byUser
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_WMI Subscription Events
+windows_login_events
+Sysmon_Private Network Connections - EventId 3
+mitre_attack_group_select
+mitre_attack_groups_matrices
+mitre_attack_groups_techniques
+mitre_attack_groups_software_cloud
+mitre_attack_groups_techniques_bar
+mitre_attack_groups_tactics
+mitre_attack_techniques_groups
+mitre_attack_group_relationship
+mitre_attack_discover
+Sysmon_Process Creation - EventId1
+Sysmon_all Network Connections - EventId 3
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+Sysmon_File Creation - EventId 11
+Sysmon_Named Pipes-EventId 17,18
+Sysmon_All_events
+Sysmon_Count
+Sysmon_EventIDs
+Sysmon_Host_Name
+Sysmon_User_Name
+Sysmon_Process_Name
+Sysmon_Process_Command_Line
+Sysmon_Process_Parent_Name
+Sysmon_Process_Parent_Command_Line
+Sysmon_File_Name
+Sysmon_Registry_Key_Path
+Sysmon_module_loaded
+Sysmon_Pipe_Name
+Sysmon_Unique_module_loaded
+Sysmon_Unique_Process_Name
+Sysmon_Discover
+Sysmon_Network_Count
+Sysmon_Network_Host_Name
+Sysmon_Network_City_Name
+Sysmon_Network_dst_ip
+Sysmon_Network_User_Name
+Sysmon_Network_Process_Name
+Sysmon_Network_Port_Dst_Number
+Sysmon_Network_Country_Name
+Sysmon_Network_Discover
+Sysmon_Eventcount-per-host
+Sysmon_Timelion_bySystem
+Sysmon_ExecutedCommands
+Sysmon_Process Creation - EventId1
+Sysmon_Public Network Connections - EventId 3
+Sysmon_File Creation - EventId 11
+Sysmon_Downloads-EventId 15
+Sysmon_Registry Events
+windows_login_events

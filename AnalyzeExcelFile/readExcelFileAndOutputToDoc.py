@@ -21,16 +21,20 @@ paragraph_format = style.paragraph_format
 paragraph_format.first_line_indent = Cm(0.74)
 
 # 设置1级标题的字体为Times New Roman， 且无缩进
+# 这种写法只能够修改Normal样式的字体，修改标题的字体无效。
 style_heading1 = doc.styles['Heading 1']
+style_heading1.font.name = u'Times New Roman'
+
 heading1_format = style_heading1.paragraph_format
 heading1_format.first_line_indent = Cm(0)
-style_heading1.font.name = 'Times New Roman'
+
 
 # 设置2级标题的字体为Times New Roman， 且无缩进
 style_heading2 = doc.styles['Heading 2']
+style_heading2.font.name = 'Times New Roman'
 heading2_format = style_heading2.paragraph_format
 heading2_format.first_line_indent = Cm(0)
-style_heading2.font.name = 'Times New Roman'
+
 
 # open the .xlsx file
 book = xlrd.open_workbook('resource/helk dashboard visualization_补充完整.xlsx')
