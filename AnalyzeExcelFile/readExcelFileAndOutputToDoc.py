@@ -1,6 +1,7 @@
 import xlrd
 import docx
 from docx.shared import Inches
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 # 新建doc文档
 doc = docx.Document()
@@ -26,11 +27,18 @@ for rowNum in range(1, sheet1.nrows):
 
     if(visualization is not ""):
         doc.add_heading(visualization, 2)
-        doc.add_paragraph('该visualization的类型为' + visualization_type + ',其作用是' + description + '其界面如下图所示：')
+        doc.add_paragraph('该visualization的类型为' + visualization_type + ',其作用是' + description + '。其界面如下图所示：')
         pic_path = 'resource/pic/' + visualization + '.png'
         try:
-            # 指定图片宽度为 5英寸
-            doc.add_picture(pic_path, width=Inches(5))
+            # 指定图片宽度为 4英寸, 图片高度会自动调整
+            doc.add_picture(pic_path, width=Inches(4))
+            last_paragraph = doc.paragraphs[-1]
+            #图片居中设置
+            last_paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+
+            # 输出已经分析的visualization名字到指定文件
+            with open("resource/visualization.txt", "at", encoding="utf-8") as file:
+                file.write(visualization+'\n')
         except FileNotFoundError:
             print(pic_path + "不存在")
             continue
