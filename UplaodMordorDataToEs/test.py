@@ -2,9 +2,9 @@
 #coding:utf-8
 
 '''
-第一步，解压gz文件得到json文件
-第二步，修改nxlog数据
-第三步，使用该脚本通过kafkacat将json文件，该脚本不解压gz文件
+第一步，解压gz文件得到json文件, 该脚本不解压
+第二步，修改nxlog数据，该脚本不修改nxlog数据。
+第三步，使用该脚本通过kafkacat将json文件。 该脚本只迭代将所有的json温江上传到HELK
 '''
 import os
 import tarfile
@@ -42,13 +42,9 @@ def get_filelist(dir, Filelist):
             shellcode = 'kafkacat -b ' + helk_ip + ':9092 -t winlogbeat -P -l ' + dir
             os.system(shellcode)
             print(shellcode)
-        # # 若只是要返回文件文，使用这个
-        # Filelist.append(os.path.basename(dir))
+
     elif os.path.isdir(dir):
         for s in os.listdir(dir):
-            # 如果需要忽略某些文件夹，使用以下代码
-     #              # if s == "xxx":
-        #                   # continue
             newDir = os.path.join(dir, s)
             get_filelist(newDir, Filelist)
     return Filelist
