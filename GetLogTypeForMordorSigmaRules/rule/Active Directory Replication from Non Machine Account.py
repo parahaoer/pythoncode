@@ -53,7 +53,7 @@ doc = {
                       "must": [
                         {
                           "wildcard": {
-                            "SubjectUserName|endswith.keyword": "*$"
+                            "user_name.keyword": "*$"
                           }
                         }
                       ]

@@ -35,17 +35,17 @@ doc =  {
                       "should": [
                         {
                           "wildcard": {
-                            "Message.keyword": "*ActiveScriptEventConsumer*"
+                            "user_data.CONSUMER.keyword": "*ActiveScriptEventConsumer*"
                           }
                         },
                         {
                           "wildcard": {
-                            "Message.keyword": "*CommandLineEventConsumer*"
+                            "user_data.CONSUMER.keyword": "*CommandLineEventConsumer*"
                           }
                         },
                         {
                           "wildcard": {
-                            "Message.keyword": "*CommandLineTemplate*"
+                            "user_data.CONSUMER.keyword": "*CommandLineTemplate*"
                           }
                         }
                       ]
@@ -65,6 +65,8 @@ doc =  {
     }
   }
 }
+
+
 
 
 res = es.search(index="logs-endpoint-winevent-*",body=doc)

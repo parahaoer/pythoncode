@@ -60,7 +60,7 @@ doc = {
                             "must": [
                               {
                                 "match_phrase": {
-                                  "SubjectDomainName": "Window Manager"
+                                  "user_domain": "Window Manager"
                                 }
                               }
                             ]
@@ -83,12 +83,12 @@ doc = {
                             "should": [
                               {
                                 "wildcard": {
-                                  "SubjectUserName.keyword": "NT AUTHORITY*"
+                                  "user_name.keyword": "NT AUTHORITY*"
                                 }
                               },
                               {
                                 "wildcard": {
-                                  "SubjectUserName.keyword": "*$"
+                                  "user_name.keyword": "*$"
                                 }
                               }
                             ]
