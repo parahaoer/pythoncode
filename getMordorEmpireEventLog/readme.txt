@@ -5,4 +5,6 @@
   if searchStr is not "":
       split_list = line.split(searchStr)
 
-2、
+2、求列表command_list减去列表command_list_of_three_rules的差集
+command_list_left = [command for command in command_list if command not in command_list_of_three_rules]
+
