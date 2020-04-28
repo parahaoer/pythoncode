@@ -7,6 +7,8 @@ wb = copy(rb)
 1、获取excel表格某一列元素的列表
 sheet2.col_values(0)
 
-2、
+2、遍历列表中的元素并获得其下标：
+for id, rule in enumerate(sub_rule_list)
+
 
 
