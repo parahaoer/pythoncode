@@ -1,0 +1,2 @@
+15.B.1  get-content \\HFDC01\IT\it_tasks.txt
+19.D.1  del c:\$Recycle.Bin\old.7z

