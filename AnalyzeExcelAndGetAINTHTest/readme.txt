@@ -10,5 +10,8 @@ sheet2.col_values(0)
 2、遍历列表中的元素并获得其下标：
 for id, rule in enumerate(sub_rule_list)
 
+3、匹配例如： 12、 字样的字符串。 re.match 是 从字符串的起始位置匹配一个模式，如果不是起始位置匹配成功的话，match()就返回None
+ re.match('^' + str(id) + u'、\\s*$' , paragraph.text)
+
 
 
