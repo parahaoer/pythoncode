@@ -34,6 +34,7 @@ wb = copy(rb)
 sheet1 = rb.sheets()[0]
 command_col = sheet1.col_values(1)
 
+# 由于 step_list, command_list有相同的顺序和索引，所有通过commad的索引来获得step的索引
 rowNumAndCommandTupleList = [(rowNum,command) for rowNum, command in enumerate(command_col) if command in command_list]
 for id, rowNumAndCommandTuple in enumerate(rowNumAndCommandTupleList):
     rowNum = rowNumAndCommandTuple[0]
