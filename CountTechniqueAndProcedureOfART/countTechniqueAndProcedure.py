@@ -5,8 +5,11 @@ doc = docx.Document('resource/part2.docx')
 
 paragraphs = doc.paragraphs
 
+# technique_dict 是键为technique ，值为 该technique的个数
 technique_dict = {}
 technique = ""
+
+#technique_procedure_dict 是键为technique ，值为 该technique的procedure列表
 technique_procedure_dict = {}
 for paragraph in paragraphs:
 
