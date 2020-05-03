@@ -1,0 +1,285 @@
+T1191,CMSTP Executing Remote Scriptlet
+T1191,CMSTP Executing UAC Bypass
+T1059,Compiled HTML Help Local Payload
+T1059,Compiled HTML Help remote Payload
+T1196,Control Panel Items
+T1173,Execute Commands
+T1173,Execute PowerShell script via Word DDE
+T1118,InstallUtil uninstall method call
+T1118,InstallUtil GetHelp method call
+T1170,Mshta executes JavaScript Scheme Fetch Remote Payload With GetObject
+T1170,Mshta calls a local VBScript file to launch notepad.exe
+T1170,Mshta executes VBScript to execute malicious command
+T1170,Mshta Executes Remote HTML Application (HTA)
+T1086,Mimikatz
+T1086,BloodHound
+T1086,Obfuscation Tests
+T1086,Mimikatz-Cradlecraft PsSendKeys
+T1086,Invoke-AppPathBypass
+T1086,PowerShell Add User
+T1086,Powershell MsXml COM object 每no prompt
+T1086,Powershell MsXml COM object-with prompt
+T1086,Powershell XML requests
+T1086,Powershell invoke mshta.exe download
+T1086,Powershell invoke-DownloadCradle
+T1086,PowerShell Fileless Script Execution
+T1086,PowerShell Downgrade Attack
+T1086,NTFS Alternate Data Stream Access
+T1121,Regasm Unistall Method Call Test
+T1121,Regasm Uninstall Method Call Test
+T1121,Regsvs Uninstall Method Call Test
+T1117,Regsvr32 local COM scriptlet execution
+T1117,Regsvr32 remote COM scriptlet execution
+T1117,Regsvr32 local DLL execution
+T1085,Rundll32 execute JavaScript Remote Payload With GetObject
+T1085,Rundll32 execute Vbscript command
+T1085,Rundll32 advpack.dll Execution
+T1085,Rundll32 ieadvpack.dll Execution
+T1085,Rundll32 syssetup.dll Execution
+T1085,Rundll32 setupapi.dll Execution
+T1085,Rundll32 execute VBscript command
+T1053,At.exe Scheduled task
+T1053,Scheduled task Local
+T1053,Scheduled task Remote
+T1053,Powershell Cmdlet Scheduled Task
+T1035,Execute a Command as a Service
+T1218,mavinject - Inject DLL into running process
+T1218,SyncAppvPublishingServer - Execute arbitrary PowerShell code
+T1218,Register-CimProvider - Execute evil dll
+T1218,Msiexec.exe - Execute Local MSI file
+T1218,Msiexec.exe - Execute Remote MSI file
+T1218,Msiexec.exe - Execute Arbitrary DLL
+T1218,Odbcconf.exe - Execute Arbitrary DLL
+T1218,InfDefaultInstall.exe .inf Execution
+T1216,PubPrn.vbs Signed Script Bypass
+T1216,SyncAppvPublishingServe Signed Script PowerShell Command Execution
+T1216,manage-bde.wsf Signed Script Command Execution
+T1127,MSBuild Bypass Using Inline Tasks
+T1047,WMI Reconnaissance Users
+T1047,WMI Reconnaissance Processes
+T1047,WMI Reconnaissance Software
+T1047,WMI Reconnaissance List Remote Services
+T1047,WMI Execute Local Process
+T1047,WMI Execute Remote Process
+T1028,Enable Windows Remote Management
+T1028,PowerShell Lateral Movement
+T1028,WMIC Process Call Create
+T1028,Psexec
+T1028,Invoke-Command
+T1220,MSXSL Bypass using local files
+T1220,MSXSL Bypass using remote files
+T1220,WMIC bypass using local XSL file
+T1220,WMIC bypass using remote XSL file
+T1015,Attaches Command Prompt As Debugger To Process 每 osk
+T1015,Attaches Command Prompt As Debugger To Process 每 sethc
+T1098,Account Manipulate
+T1103,Install AppInit Shim
+T1138,Application Shim Installation
+T1138,New shim database files created in the default shim database directory
+T1138,Registry key creation and/or modification events for SDB
+T1197,Atomic Test #1 每 Download & Execute
+T1197,Download & Execute via PowerShell BITS
+T1197,Persist, Download & Execute
+T1197,Download & Execute
+T1042,Change Default File Association
+T1122,Component Object Model Hijacking
+T1136,Create a new user in a command prompt
+T1136,Create a new user in PowerShell
+T1038,DLL Search Order Hijacking-amsi.dll
+T1038,DLL Search Order Hijacking - amsi.dll
+T1044,File System Permissions Weakness
+T1158,Create Windows System File with Attrib
+T1158,Create Windows Hidden File with Attrib
+T1158,Create ADS command prompt
+T1158,Create ADS PowerShell
+T1179,Hook PowerShell TLS Encrypt/Decrypt Message
+T1179,Hook PowerShell TLS Encrypt/Decrypt Messages
+T1037,Logon Scripts
+T1037,Scheduled Task Startup Script
+T1031,Modify Fax Service to run PowerShell
+T1128,Netsh Helper DLL Registration
+T1050,Service Installation
+T1050,Service Installation powershell installs A local Service using PowerShell
+T1050,DLL Search Order Hijacking - amsi.dll
+T1050,Service Installation PowerShell Installs A Local Service using PowerShell
+T1137,DDEAUTO
+T1504,Append malicious start-process cmdlet
+T1060,Atomic Test #1 每 Reg Key Run
+T1060,Atomic Test #2 每 Reg Key RunOnce
+T1060,Atomic Test #3 每 PowerShell Registry RunOnce
+T1060,Startup Folder
+T1180,Set Arbitrary Binary as Screensaver
+T1101,Modify SSP configuration in registry
+T1058,Service Registry Permissions Weakness
+T1023,Shortcut Modification
+T1023,Create shortcut to cmd in startup folders
+T1100,Web Shell Written to Disk
+T1084,Persistence
+T1004,Winlogon Shell Key Persistence 每 PowerShell
+T1004,Winlogon Userinit Key Persistence 每 PowerShell
+T1004,Winlogon Notify Key Logon Persistence 每 PowerShell
+T1134,Access Token Manipulation
+T1088,Bypass UAC using Event Viewer
+T1088,Bypass UAC using Event Viewer - PowerShell
+T1088,Bypass UAC using Fodhelper
+T1088,Bypass UAC using Fodhelper - PowerShell
+T1088,Bypass UAC using ComputerDefaults 每 PowerShell
+T1088,Bypass UAC by Mocking Trusted Directories
+T1183,IFEO Add Debugger
+T1183,IFEO Global Flags
+T1055,Process Injection via mavinject.exe
+T1055,Process Injection via PowerSploit
+T1055,Process Injection via C#
+T1055,svchost writing a file to a UNC path
+T1500,Compile After Delivery using csc.exe
+T1223,Compiled HTML Help Local Payload
+T1090,portproxy reg key
+T1207,DCShadow - Mimikatz
+T1073,DLL Side-Loading using the Notepad++ GUP.exe binary
+T1140,Deobfuscate/Decode Files Or Information
+T1140,Certutil Rename and Decode
+T1089,Unload Sysmon Filter Driver
+T1089,Disable Windows IIS HTTP Logging
+T1089,Uninstall Sysmon
+T1089,AMSI Bypass - AMSI InitFailed
+T1089,AMSI Bypass - Remove AMSI Provider Reg Key
+T1089,Disable Arbitrary Security Windows Service
+T1089,Disable PowerShell Script Block Logging
+T1089,PowerShell Bypass of AntiMalware Scripting Interface
+T1107,Delete a single file - Windows cmd
+T1107,Delete an entire folder - Windows cmd
+T1107,Delete a single file - Windows PowerShell
+T1107,Delete an entire folder - Windows PowerShell
+T1107,Delete VSS - vssadmin
+T1107,Delete VSS - wmic
+T1107,bcdedit
+T1107,wbadmin
+T1107,Delete-PrefetchFile
+T1222,Take ownership using takeown utility
+T1222,Take ownership recursively using takeown utility
+T1222,cacls - Grant permission to specified user or group
+T1222,cacls - Grant permission to specified user or group recursively
+T1222,icacls - Grant permission to specified user or group
+T1222,icacls - Grant permission to specified user or group recursively
+T1222,attrib - Remove read-only attribute
+T1143,Hidden Window
+T1070,Clear Logs
+T1070,FSUtil
+T1070,Delete System Logs Using PowerShell
+T1070,Delete System Logs Using Clear-EventLogId
+T1202,Indirect Command Execution - pcalua.exe
+T1202,Indirect Command Execution - forfiles.exe
+T1036,Masquerading as Windows LSASS process
+T1036,Masquerading - cscript.exe running as notepad.exe
+T1036,Masquerading - wscript.exe running as svchost.exe
+T1036,Masquerading - powershell.exe running as taskhostw.exe
+T1036,Masquerading - non-windows exe running as windows exe
+T1036,Masquerading - windows exe running as different windows exe
+T1036,Malicious process Masquerading as LSM.exe
+T1112,Modify Registry of Current User Profile - cmd
+T1112,Modify Registry of Local Machine - cmd
+T1112,Modify registry to store logon credentials
+T1112,Modify registry to store PowerShell code
+T1096,Alternate Data Streams (ADS)
+T1126,Add Network Share
+T1126,Remove Network Share
+T1126,Remove Network Share PowerShell
+T1027,Execute base64-encoded PowerShell
+T1027,Execute base64-encoded PowerShell from Windows Registry
+T1014,Windows Signed Driver Rootkit Test
+T1064,Create and Execute Batch Script
+T1099,Windows - Modify file creation timestamp with PowerShell
+T1099,Windows - Modify file last modified timestamp with PowerShell
+T1099,Windows - Modify file last access timestamp with PowerShell
+T1102,Reach out to C2 Pointer URLs via command_prompt
+T1102,Reach out to C2 Pointer URLs via powershell
+T1139,Search Through Bash History
+T1110,Brute Force Credentials
+T1003,Powershell Mimikatz [windows]
+T1003,Windows Credential Editor [windows]
+T1003,Dump LSASS.exe Memory using ProcDump [windows]
+T1003,Dump Active Directory Database with NTDSUtil [windows]
+T1003,Create Volume Shadow Copy with NTDS.dit [windows]
+T1003,Copy NTDS.dit from Volume Shadow Copy [windows]
+T1003,GPP Passwords (Get-GPPPassword) [windows]
+T1081,Extract passwords with grep [macos, linux]
+T1087,Enumerate all accounts
+T1087,Enumerate all accounts via powershell
+T1087,Enumerate logged on users
+T1087,Enumerate logged on users via powershell
+T1010,List Process Main Windows 每c# .NET
+T1482,Windows-Discover Domain trusts with dsquery
+T1482,Powershell enumerate domains and forests
+T1083,File and Directory Discovery
+T1135,Netword Share Discovery command prompt
+T1135,Netword Share Discovery Powershell
+T1135,View avaliabe share drives
+T1040,Packet Capture Windows Command Prompt
+T1040,Packet Capture powershell
+T1201,Examine local passwrod policy
+T1201,Examine domain password policy
+T1069,Basic Permission Groups Discovery Windows
+T1069,Permission Groups Discovery Powershell
+T1069,Elevated Group enumeration using net group
+T1057,Process Discovery -tasklist
+T1012,Query RegistryS
+T1018,Remote System Discovery - net
+T1018,Remote System Discovery 每 net group Domain Computers
+T1018,Remote System Discovery 每 nltest
+T1018,Remote System Discovery 每 ping sweep
+T1018,Remote System Discovery 每 nslookup
+T1018,Remote System Discovery - arp
+T1063,Security Software Discovery
+T1063,Security Software Discovery-Powershell
+T1063,Security Software Discovery-Sysmon Service
+T1518,Find and Display linternet Explorer Browser Version
+T1082,System Information Discovery
+T1082,Hostname Discovery
+T1082,Windows MachineGUID Discovery
+T1016,System Network Configuration Discovery
+T1016,List Windows Firewall Rules
+T1016,Extract passwords with grep [macos, linux]
+T1049,System Network Connections Discovery
+T1049,System Network Connections Discovery with powershell
+T1033,System Owner/User Discovery
+T1007,System Service Discovery
+T1007,System Service Discovery 每 net.exe
+T1124,System Time Discovery
+T1124,System Time Discovery-powershell
+T1075,Mimikatz Pass the Hash
+T1075,Crackmapexec Pass the Hash
+T1097,Mimikatz Kerberos Ticket Attack
+T1076,RDP
+T1076,RDPto-DomainController
+T1105,Certutil download (urlcache)
+T1105,Certutil download (verifyctl)
+T1105,Windows-BITSAdmin BITS Download
+T1105,Windows-PowerShell Download
+T1077,Map admin share
+T1077,Map admin share Powershell
+T1077,Copy and execute file with psexec
+T1077,Execute command writing output to local admin share
+T1123,SourceRecorder via windows command prompt
+T1123,Powershell cmdlet via windows command prompt
+T1119,Automated Collection Command Prompt
+T1119,Automated Collection Powershell
+T1119,Recon information for export with powershell
+T1119,Recon information for export with command prompt
+T1115,Utilize Clipboard to store or execute comands from
+T1115,Powershell
+T1074,Stage data from discovery.bat
+T1074,Zip a Folder with powershell
+T1114,Email collection with Powershell
+T1531,Change user password
+T1531,Delete user
+T1485,Delete Volume Shadow Copies
+T1485,Delete Windows Backup Catelog
+T1485,Disable Windows Recovery Console Repair
+T1485,Overwrite file with Sysinternals Sdelete
+T1485,Delete Backup Files
+T1490,Delete Volume Shadow copies via wmi
+T1489,Stop service using service controller
+T1489,Stop service using net.exe
+T1489,Stop service by killing process
+T1529,Shutdown System
+T1529,Restart System
