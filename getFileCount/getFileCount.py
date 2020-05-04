@@ -1,7 +1,7 @@
 import os
 
 def get_filelist(dir, Filelist):
-    newDir = dir
+
     if os.path.isfile(dir):
         Filelist.append(dir)
 
@@ -14,6 +14,7 @@ def get_filelist(dir, Filelist):
 if __name__ == '__main__':
     image_path = "C:\\gitRepo\\sigma\\rules"
     list = get_filelist(image_path, [])
-    print(len(list))
+    
     for e in list:
         print(e)
+    print(len(list))
