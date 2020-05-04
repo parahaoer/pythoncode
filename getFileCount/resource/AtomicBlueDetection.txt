@@ -1,0 +1,116 @@
+AD Dumping via Ntdsutil.exe	Tony Lambert	01/07/2019	Credential Access	T1003 Credential Dumping
+Audio Capture via PowerShell	Endgame	11/30/2018	Collection	T1123 Audio Capture
+Audio Capture via SoundRecorder	Endgame	11/30/2018	Collection	T1123 Audio Capture
+Bypass UAC via CMSTP	Endgame	11/30/2018	
+Defense Evasion
+
+Execution
+
+T1191 CMSTP
+
+T1088 Bypass User Account Control
+
+Bypass UAC via Fodhelper.exe	Tony Lambert	05/17/2019	Privilege Escalation	T1088 Bypass User Account Control
+Bypass UAC via Fodhelper.exe	Tony Lambert	05/17/2019	Privilege Escalation	T1088 Bypass User Account Control
+Bypass UAC via WSReset.exe	Tony Lambert	05/17/2019	Privilege Escalation	T1088 Bypass User Account Control
+Change Default File Association	Endgame	11/30/2018	Persistence	T1042 Change Default File Association
+Clearing Windows Event Logs with wevtutil	Endgame	11/30/2018	Defense Evasion	T1070 Indicator Removal on Host
+COM Hijack via Script Object	Endgame	11/30/2018	
+Persistence
+
+Defense Evasion
+
+T1122 Component Object Model Hijacking
+Command-Line Creation of a RAR file	Endgame	11/30/2018	Exfiltration	T1002 Data Compressed
+Delete Volume USN Journal with fsutil	Endgame	11/30/2018	Defense Evasion	T1070 Indicator Removal on Host
+Discovery of a Remote System’s Time	Endgame	11/30/2018	Discovery	T1124 System Time Discovery
+Domain Trust Discovery via Nltest.exe	Tony Lambert	05/17/2019	Discovery	T1482 Domain Trust Discovery
+Encoding or Decoding Files via CertUtil	Endgame	11/30/2018	Defense Evasion	T1140 Deobfuscate/Decode Files or Information
+Enumeration of Mounted Shares	Endgame	11/30/2018	Discovery	T1049 System Network Connections Discovery
+Enumeration of Remote Shares	Endgame	11/30/2018	Discovery	T1135 Network Share Discovery
+Execution of a Command via a SYSTEM Service	Endgame	11/30/2018	Privilege Escalation	
+T1035 Service Execution
+
+T1050 New Service
+
+HH.exe execution	Dan Beavin	09/26/2019	
+Defense Evasion
+
+Execution
+
+T1223 Compiled HTML File
+Image Debuggers for Accessibility Features	Endgame	11/30/2018	
+Persistence
+
+Privilege Escalation
+
+Defense Evasion
+
+T1015 Accessibility Features
+
+T1183 Image File Execution Options Injection
+
+Indirect Command Execution	Endgame	11/30/2018	Defense Evasion	T1202 Indirect Command Execution
+Installing Custom Shim Databases	Endgame	11/30/2018	
+Persistence
+
+Privilege Escalation
+
+T1138 Application Shimming
+Interactive AT Job	Endgame	11/30/2018	Privilege Escalation	T1053 Scheduled Task
+Logon Scripts with UserInitMprLogonScript	Endgame	11/30/2018	Persistence	T1037 Logon Scripts
+LSASS Memory Dumping	Tony Lambert	01/07/2019	Credential Access	T1003 Credential Dumping
+LSASS Memory Dumping via ProcDump.exe	Tony Lambert	01/07/2019	Credential Access	T1003 Credential Dumping
+Modification of Boot Configuration	Endgame	05/17/2019	Impact	T1490 Inhibit System Recovery
+Modification of ld.so.preload	Tony Lambert	05/17/2019	Defense Evasion	T1055 Process Injection
+Modifications of .bash_profile and .bashrc	Tony Lambert	01/10/2019	Persistence	T1156 .bash_profile and .bashrc
+Mounting Hidden Shares	Endgame	11/30/2018	Lateral Movement	T1077 Windows Admin Shares
+Mshta Network Connections	Endgame	11/30/2018	
+Execution
+
+Defense Evasion
+
+Command and Control
+
+T1170 Mshta
+Persistence via AppInit DLL	Endgame	11/30/2018	
+Persistence
+
+Privilege Escalation
+
+T1103 AppInit DLLs
+Persistence via NetSh Key	Endgame	11/30/2018	Persistence	T1128 Netsh Helper DLL
+Persistence via Screensaver	Endgame	11/30/2018	Persistence	T1180 Screensaver
+Registry Preparation of Event Viewer UAC Bypass	Endgame	11/30/2018	Privilege Escalation	T1088 Bypass User Account Control
+RegSvr32 Scriptlet Execution	Endgame	11/30/2018	Execution	T1117 Regsvr32
+SAM Dumping via Reg.exe	Endgame	11/30/2018	Credential Access	T1003 Credential Dumping
+Suspicious ADS File Creation	Endgame	11/30/2018	Defense Evasion	T1096 NTFS File Attributes
+Suspicious Bitsadmin Job via bitsadmin.exe	Endgame	11/30/2018	
+Defense Evasion
+
+Persistence
+
+T1197 BITS Jobs
+Suspicious Bitsadmin Job via PowerShell	Endgame	11/30/2018	
+Defense Evasion
+
+Persistence
+
+T1197 BITS Jobs
+Suspicious Script Object Execution	Endgame	11/30/2018	
+Defense Evasion
+
+Execution
+
+T1117 Regsvr32
+System Information Discovery	Endgame	11/30/2018	Discovery	T1082 System Information Discovery
+Unload Sysmon Filter Driver with fltmc.exe	Endgame	11/30/2018	Defense Evasion	T1089 Disabling Security Tools
+User Account Creation	Endgame	11/30/2018	
+Persistence
+
+Credential Access
+
+T1136 Create Account
+Volume Shadow Copy Deletion via VssAdmin	Endgame	05/17/2019	Impact	T1490 Inhibit System Recovery
+Volume Shadow Copy Deletion via WMIC	Endgame	05/17/2019	Impact	T1490 Inhibit System Recovery
+Windows Network Enumeration	Endgame	11/30/2018	Discovery	T1018 Remote System Discovery

@@ -1,0 +1,210 @@
+CAR-2013-01-002: Autorun Differences	
+Create or Modify System Process
+Scheduled Task/Job
+Boot or Logon Autostart Execution
+Hijack Execution Flow
+Event Triggered Execution
+Modify Registry
+Boot or Logon Initialization Scripts
+ 	Windows
+CAR-2013-01-003: SMB Events Monitoring	
+Data from Network Shared Drive
+Remote Services
+Pseudocode	N/A
+CAR-2013-02-003: Processes Spawning cmd.exe	
+Command and Scripting Interpreter
+Dnif, Pseudocode	Windows
+CAR-2013-02-008: Simultaneous Logins on a Host	
+Valid Accounts
+Pseudocode	Windows, Linux, macOS
+CAR-2013-02-012: User Logged in to Multiple Hosts	
+Valid Accounts
+ 	Windows, Linux, macOS
+CAR-2013-03-001: Reg.exe called from Command Shell	
+Query Registry
+Modify Registry
+Boot or Logon Autostart Execution
+Hijack Execution Flow
+Dnif, Pseudocode	Windows
+CAR-2013-04-002: Quick execution of a series of suspicious commands	
+Account Discovery
+OS Credential Dumping
+Permission Groups Discovery
+Process Discovery
+Remote Services
+Create or Modify System Process
+Modify Registry
+Hijack Execution Flow
+Remote System Discovery
+System Services
+Scheduled Task/Job
+Scheduled Transfer
+System Owner/User Discovery
+System Service Discovery
+System Information Discovery
+System Network Connections Discovery
+System Network Configuration Discovery
+Application Window Discovery
+Software Discovery
+Network Service Scanning
+Impair Defenses
+Account Manipulation
+Command and Scripting Interpreter
+Query Registry
+Dnif, Pseudocode, Sigma	Windows, Linux, macOS
+CAR-2013-05-002: Suspicious Run Locations	
+Masquerading
+Dnif, Pseudocode, Sigma	Windows
+CAR-2013-05-003: SMB Write Request	
+Ingress Tool Transfer
+Remote Services
+Valid Accounts
+Pseudocode	Windows, Linux, macOS
+CAR-2013-05-004: Execution with AT	
+Scheduled Task/Job
+Dnif, Eql, Pseudocode, Splunk	Windows
+CAR-2013-05-005: SMB Copy and Execution	
+Remote Services
+Valid Accounts
+Ingress Tool Transfer
+Pseudocode	Windows, Linux, macOS
+CAR-2013-05-009: Running executables with same hash and different names	
+Masquerading
+Dnif, Sigma, Splunk	Windows, Linux, macOS
+CAR-2013-07-001: Suspicious Arguments	
+OS Credential Dumping
+Remote Services
+Ingress Tool Transfer
+Dnif, Eql, Pseudocode, Splunk	Windows, Linux, macOS
+CAR-2013-07-002: RDP Connection Detection	
+Remote Services
+Pseudocode, Sigma	N/A
+CAR-2013-07-005: Command Line Usage of Archiving Software	
+Archive Collected Data
+Dnif, Pseudocode	N/A
+CAR-2013-08-001: Execution with schtasks	
+Scheduled Task/Job
+Dnif, Pseudocode	Windows
+CAR-2013-09-003: SMB Session Setups	
+Forced Authentication
+Pseudocode	N/A
+CAR-2013-09-005: Service Outlier Executables	
+Create or Modify System Process
+Pseudocode, Sigma	Windows
+CAR-2013-10-001: User Login Activity Monitoring	
+Remote Services
+Valid Accounts
+Dnif, Pseudocode, Splunk	Windows, Linux, macOS
+CAR-2013-10-002: DLL Injection via Load Library	
+Process Injection
+Abuse Elevation Control Mechanism
+Pseudocode	Windows
+CAR-2014-02-001: Service Binary Modifications	
+Create or Modify System Process
+Hijack Execution Flow
+System Services
+Pseudocode	Windows
+CAR-2014-03-001: SMB Write Request - NamedPipes	
+Lateral Tool Transfer
+Pseudocode	Windows, Linux, macOS
+CAR-2014-03-005: Remotely Launched Executables via Services	
+Create or Modify System Process
+System Services
+Pseudocode	Windows
+CAR-2014-03-006: RunDLL32.exe monitoring	
+Signed Binary Proxy Execution
+Dnif, Pseudocode	Windows
+CAR-2014-04-003: Powershell Execution	
+Command and Scripting Interpreter
+Command and Scripting Interpreter
+Dnif, Eql, Pseudocode, Splunk	Windows
+CAR-2014-05-001: RPC Activity	
+Remote Services
+Pseudocode	Windows
+CAR-2014-05-002: Services launching Cmd	
+Create or Modify System Process
+Dnif, Eql, Pseudocode, Splunk	Windows
+CAR-2014-07-001: Service Search Path Interception	
+Hijack Execution Flow
+Pseudocode	Windows
+CAR-2014-11-002: Outlier Parents of Cmd	
+Command and Scripting Interpreter
+Pseudocode	Windows
+CAR-2014-11-003: Debuggers for Accessibility Applications	
+Event Triggered Execution
+Pseudocode	Windows
+CAR-2014-11-004: Remote PowerShell Sessions	
+Command and Scripting Interpreter
+Remote Services
+Eql, Pseudocode	Windows
+CAR-2014-11-005: Remote Registry	
+Modify Registry
+Pseudocode	Windows
+CAR-2014-11-006: Windows Remote Management (WinRM)	
+Remote Services
+Pseudocode	Windows
+CAR-2014-11-007: Remote Windows Management Instrumentation (WMI) over RPC	
+Windows Management Instrumentation
+Pseudocode	Windows
+CAR-2014-11-008: Command Launched from WinLogon	
+Event Triggered Execution
+Eql, Pseudocode, Splunk	Windows
+CAR-2014-12-001: Remotely Launched Executables via WMI	
+Windows Management Instrumentation
+Pseudocode	Windows
+CAR-2015-04-001: Remotely Scheduled Tasks via AT	
+Scheduled Task/Job
+Pseudocode	Windows
+CAR-2015-04-002: Remotely Scheduled Tasks via Schtasks	
+Scheduled Task/Job
+Pseudocode	Windows
+CAR-2015-07-001: All Logins Since Last Boot	 	Pseudocode	Windows, Linux, macOS
+CAR-2016-03-001: Host Discovery Commands	
+Account Discovery
+Permission Groups Discovery
+System Network Configuration Discovery
+System Information Discovery
+System Owner/User Discovery
+Process Discovery
+System Service Discovery
+Eql, Pseudocode, Splunk	Windows, Linux, macOS
+CAR-2016-03-002: Create Remote Process via WMIC	
+Windows Management Instrumentation
+Eql, Pseudocode, Splunk	Windows
+CAR-2016-04-002: User Activity from Clearing Event Logs	
+Indicator Removal on Host
+Pseudocode, Sigma	Windows, Linux, macOS
+CAR-2016-04-003: User Activity from Stopping Windows Defensive Services	
+Disabling Security Tools
+Pseudocode	Windows
+CAR-2016-04-004: Successful Local Account Login	
+Use Alternate Authentication Material
+Pseudocode	Windows
+CAR-2016-04-005: Remote Desktop Logon	
+Remote Services
+Pseudocode, Sigma	Windows
+CAR-2019-04-001: UAC Bypass	
+Abuse Elevation Control Mechanism
+Pseudocode, Sigma, Splunk	Windows
+CAR-2019-04-002: Generic Regsvr32	
+Signed Binary Proxy Execution
+Pseudocode, Splunk	Windows
+CAR-2019-04-003: Squiblydoo	
+Signed Binary Proxy Execution
+Eql, Psuedocode, Splunk	Windows
+CAR-2019-04-004: Credential Dumping via Mimikatz	
+OS Credential Dumping
+Splunk	Windows
+CAR-2019-07-001: Access Permission Modification	
+File and Directory Permissions Modification
+Pseudocode, Splunk	Windows, Linux, macOS
+CAR-2019-07-002: Lsass Process Dump via Procdump	
+OS Credential Dumping
+Eql, Pseudocode, Sigma, Splunk	Windows
+CAR-2019-08-001: Credential Dumping via Windows Task Manager	
+OS Credential Dumping
+Eql, Pseudocode, Splunk	Windows
+CAR-2019-08-002: Active Directory Dumping via NTDSUtil	
+OS Credential Dumping
+Eql, Pseudocode, Splunk	Windows
+CAR-2020-04-001: Shadow Copy Deletion

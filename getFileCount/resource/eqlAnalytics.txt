@@ -1,0 +1,327 @@
+﻿Access of Outlook Email Archives	Endgame	7/26/2019	Collection	T1114 Email Collection
+Account Discovery via Built-In Tools	Endgame	7/26/2019	Discovery	T1087 Account Discovery
+AD Dumping via Ntdsutil.exe	Tony Lambert	01/07/2019	Credential Access	T1003 Credential Dumping
+Adding the Hidden File Attribute with via attrib.exe	Endgame	7/26/2019	
+Defense Evasion
+
+Persistence
+
+T1158 Hidden Files and Directories
+AppCert DLLs Registry Modification	Endgame	7/26/2019	
+Privilege Escalation
+
+Persistence
+
+T1182 AppCert DLLs
+Audio Capture via PowerShell	Endgame	11/30/2018	Collection	T1123 Audio Capture
+Audio Capture via SoundRecorder	Endgame	11/30/2018	Collection	T1123 Audio Capture
+Bypass UAC via CMSTP	Endgame	11/30/2018	
+Defense Evasion
+
+Execution
+
+T1191 CMSTP
+
+T1088 Bypass User Account Control
+
+Bypass UAC via CompMgmtLauncher	Daniel Stepanic	12/04/2019	Privilege Escalation	T1088 Bypass User Account Control
+Bypass UAC via Fodhelper.exe	Tony Lambert	05/17/2019	Privilege Escalation	T1088 Bypass User Account Control
+Bypass UAC via Fodhelper.exe	Tony Lambert	05/17/2019	Privilege Escalation	T1088 Bypass User Account Control
+Bypass UAC via WSReset.exe	Tony Lambert	05/17/2019	Privilege Escalation	T1088 Bypass User Account Control
+Change Default File Association	Endgame	11/30/2018	Persistence	T1042 Change Default File Association
+Clearing Windows Event Logs with wevtutil	Endgame	11/30/2018	Defense Evasion	T1070 Indicator Removal on Host
+COM Hijack via Script Object	Endgame	11/30/2018	
+Persistence
+
+Defense Evasion
+
+T1122 Component Object Model Hijacking
+Command-Line Creation of a RAR file	Endgame	11/30/2018	Exfiltration	T1002 Data Compressed
+Control Panel Items	Endgame	7/26/2019	
+Defense Evasion
+
+Execution
+
+T1196 Control Panel Items
+Creation of an Archive with Common Archivers	Endgame	7/26/2019	Collection	T1074 Data Staged
+Creation of Kernel Module	Endgame	7/26/2019	Persistence	T1215 Kernel Modules and Extensions
+Creation of Scheduled Task with schtasks.exe	Endgame	7/26/2019	
+Privilege Escalation
+
+Execution
+
+Persistence
+
+T1053 Scheduled Task
+Creation or Modification of Systemd Service	Endgame	7/26/2019	Persistence	T1501 Systemd Service
+Credential Enumeration via Credential Vault CLI	David French	8/16/2019	Credential Access	T1003 Credential Dumping
+Delete Volume USN Journal with fsutil	Endgame	11/30/2018	Defense Evasion	T1070 Indicator Removal on Host
+Disconnecting from Network Shares with net.exe	Endgame	7/26/2019	Defense Evasion	T1126 Network Share Connection Removal
+Discovery and Enumeration of System Information via Rundll32	Daniel Stepanic	12/04/2019	Discovery	
+T1087 Account Discovery
+
+T1096 NTFS File Attributes
+
+T1033 System Owner/User Discovery
+
+Discovery of a Remote System’s Time	Endgame	11/30/2018	Discovery	T1124 System Time Discovery
+Discovery of Domain Groups	Endgame	7/26/2019	Discovery	T1069 Permission Groups Discovery
+Discovery of Network Environment via Built-in Tools	Endgame	7/26/2019	Discovery	T1016 System Network Configuration Discovery
+Discovery of Network Environment via Built-in Tools	Endgame	7/26/2019	Discovery	T1016 System Network Configuration Discovery
+DLL Search Order Hijacking with known programs	Endgame	7/26/2019	
+Privilege Escalation
+
+Defense Evasion
+
+Persistence
+
+T1038 DLL Search Order Hijacking
+Domain Trust Discovery	Endgame	7/26/2019	Discovery	T1482 Domain Trust Discovery
+Domain Trust Discovery via Nltest.exe	Tony Lambert	05/17/2019	Discovery	T1482 Domain Trust Discovery
+Encoding or Decoding Files via CertUtil	Endgame	11/30/2018	Defense Evasion	T1140 Deobfuscate/Decode Files or Information
+Enumeration of Local Shares	Endgame	11/30/2018	Discovery	T1135 Network Share Discovery
+Enumeration of Mounted Shares	Endgame	11/30/2018	Discovery	T1049 System Network Connections Discovery
+Enumeration of Remote Shares	Endgame	11/30/2018	Discovery	T1135 Network Share Discovery
+Enumeration of System Information	Endgame	7/26/2019	Discovery	T1082 System Information Discovery
+Enumeration of System Information	Endgame	7/26/2019	Discovery	T1082 System Information Discovery
+Executable Written and Executed by Microsoft Office Applications	Daniel Stepanic	12/04/2019	Execution	
+T1204 User Execution
+
+T1173 Dynamic Data Exchange
+
+Execution of a Command via a SYSTEM Service	Endgame	11/30/2018	Privilege Escalation	
+T1035 Service Execution
+
+T1050 New Service
+
+Execution of Existing Service via Command	Endgame	7/26/2019	Execution	T1035 Service Execution
+Execution via cmstp.exe	Endgame	7/26/2019	
+Defense Evasion
+
+Execution
+
+T1191 CMSTP
+HH.exe execution	Dan Beavin	09/26/2019	
+Defense Evasion
+
+Execution
+
+T1223 Compiled HTML File
+Host Artifact Deletion	Endgame	7/26/2019	Defense Evasion	T1070 Indicator Removal on Host
+Image Debuggers for Accessibility Features	Endgame	11/30/2018	
+Persistence
+
+Privilege Escalation
+
+Defense Evasion
+
+T1015 Accessibility Features
+
+T1183 Image File Execution Options Injection
+
+Incoming Remote PowerShell Sessions	Endgame	7/26/2019	
+Lateral Movement
+
+Execution
+
+T1028 Windows Remote Management
+Indirect Command Execution	Endgame	11/30/2018	Defense Evasion	T1202 Indirect Command Execution
+Installation of Port Monitor	Endgame	7/26/2019	
+Privilege Escalation
+
+Persistence
+
+T1013 Port Monitors
+Installation of Security Support Provider	Endgame	7/26/2019	Persistence	T1101 Security Support Provider
+Installation of Time Providers	Endgame	7/26/2019	Persistence	T1209 Time Providers
+Installing Custom Shim Databases	Endgame	11/30/2018	
+Persistence
+
+Privilege Escalation
+
+T1138 Application Shimming
+InstallUtil Execution	Endgame	7/26/2019	
+Execution
+
+Defense Evasion
+
+T1118 InstallUtil
+Interactive AT Job	Endgame	11/30/2018	Privilege Escalation	T1053 Scheduled Task
+Launch Daemon Persistence	Endgame	7/26/2019	
+Privilege Escalation
+
+Persistence
+
+T1160 Launch Daemon
+Loading Kernel Modules with kextload	Endgame	7/26/2019	Persistence	T1215 Kernel Modules and Extensions
+Local Job Scheduling Paths	Endgame	7/26/2019	
+Execution
+
+Persistence
+
+T1168 Local Job Scheduling
+Local Job Scheduling Process	Endgame	7/26/2019	
+Execution
+
+Persistence
+
+T1168 Local Job Scheduling
+Logon Scripts with UserInitMprLogonScript	Endgame	11/30/2018	Persistence	T1037 Logon Scripts
+LSA Authentication Package	Endgame	7/26/2019	Persistence	T1131 Authentication Package
+LSASS Memory Dumping	Tony Lambert	01/07/2019	Credential Access	T1003 Credential Dumping
+LSASS Memory Dumping via ProcDump.exe	Tony Lambert	01/07/2019	Credential Access	T1003 Credential Dumping
+Modification of Boot Configuration	Endgame	05/17/2019	Impact	T1490 Inhibit System Recovery
+Modification of ld.so.preload	Tony Lambert	05/17/2019	Defense Evasion	T1055 Process Injection
+Modification of Logon Scripts from Registry	Endgame	7/26/2019	
+Lateral Movement
+
+Persistence
+
+T1037 Logon Scripts
+Modification of rc.common Script	Endgame	7/26/2019	Persistence	T1163 Rc.common
+Modifications of .bash_profile and .bashrc	Tony Lambert	01/10/2019	Persistence	T1156 .bash_profile and .bashrc
+Mounting Hidden Shares	Endgame	11/30/2018	Lateral Movement	T1077 Windows Admin Shares
+Mounting Windows Hidden Shares with net.exe	Endgame	7/26/2019	Lateral Movement	T1077 Windows Admin Shares
+MS Office Template Injection	Daniel Stepanic	02/12/2020	Defense Evasion	T1221 Template Injection
+Mshta Descendant of Microsoft Office	Daniel Stepanic	12/04/2019	
+Execution
+
+Defense Evasion
+
+Command and Control
+
+T1170 Mshta
+Mshta Network Connections	Endgame	11/30/2018	
+Execution
+
+Defense Evasion
+
+Command and Control
+
+T1170 Mshta
+Network Service Scanning via Port	Endgame	7/26/2019	Discovery	T1046 Network Service Scanning
+Non-browser processes making DNS requests to Dynamic DNS Providers	Daniel Stepanic	02/12/2020	Command and Control	T1071 Standard Application Layer Protocol
+Office Application Startup via Template File Modification	Endgame	7/26/2019	Persistence	T1137 Office Application Startup
+Office Application Startup via Template Registry Modification	Endgame	7/26/2019	Persistence	T1137 Office Application Startup
+Password Policy Enumeration	Endgame	7/26/2019	Discovery	T1201 Password Policy Discovery
+Persistence via AppInit DLL	Endgame	11/30/2018	
+Persistence
+
+Privilege Escalation
+
+T1103 AppInit DLLs
+Persistence via NetSh Key	Endgame	11/30/2018	Persistence	T1128 Netsh Helper DLL
+Persistence via Screensaver	Endgame	11/30/2018	Persistence	T1180 Screensaver
+Persistent process via Launch Agent	Endgame	7/26/2019	Persistence	T1159 Launch Agent
+Plist Modification	Endgame	7/26/2019	
+Privilege Escalation
+
+Defense Evasion
+
+Persistence
+
+T1150 Plist Modification
+Potential Gatekeeper Bypass	Endgame	7/26/2019	Defense Evasion	T1144 Gatekeeper Bypass
+Process Discovery via Built-In Applications	Endgame	7/26/2019	Discovery	
+T1057 Process Discovery
+
+T1063 Security Software Discovery
+
+Process Discovery via Windows Tools	Endgame	7/26/2019	Discovery	
+T1057 Process Discovery
+
+T1063 Security Software Discovery
+
+Processes Running with Unusual Extensions	Endgame	7/26/2019	Defense Evasion	T1036 Masquerading
+Processes with Trailing Spaces	Endgame	7/26/2019	
+Defense Evasion
+
+Execution
+
+T1151 Space after Filename
+Proxied Execution via Signed Scripts	Endgame	7/26/2019	
+Defense Evasion
+
+Execution
+
+T1216 Signed Script Proxy Execution
+Reading the Clipboard with pbpaste	Endgame	7/26/2019	Collection	T1115 Clipboard Data
+Registration of a Password Filter DLL	Endgame	7/26/2019	Credential Access	T1174 Password Filter DLL
+Registration of Winlogon Helper DLL	Endgame	7/26/2019	Persistence	T1004 Winlogon Helper DLL
+Registry Persistence via Run Keys	Endgame	7/26/2019	Persistence	T1060 Registry Run Keys / Startup Folder
+Registry Persistence via Shell Folders	Endgame	7/22/2019	Persistence	T1060 Registry Run Keys / Startup Folder
+Registry Preparation of Event Viewer UAC Bypass	Endgame	11/30/2018	Privilege Escalation	T1088 Bypass User Account Control
+RegSvr32 Scriptlet Execution	Endgame	11/30/2018	Execution	T1117 Regsvr32
+Remote Desktop Protocol Hijack	Endgame	7/26/2019	Lateral Movement	T1076 Remote Desktop Protocol
+Remote Execution via WMIC	Endgame	11/30/2018	
+Lateral Movement
+
+Execution
+
+T1047 Windows Management Instrumentation
+Remote System Discovery Commands	Endgame	7/26/2019	Discovery	T1018 Remote System Discovery
+Remote Terminal Sessions	Endgame	7/26/2019	Lateral Movement	T1021 Remote Services
+Resumed Application on Reboot	Endgame	7/26/2019	Persistence	T1164 Re-opened Applications
+Root Certificate Install	Endgame	7/26/2019	Defense Evasion	T1130 Install Root Certificate
+SAM Dumping via Reg.exe	Endgame	11/30/2018	Credential Access	T1003 Credential Dumping
+Scheduled Task Creation via Microsoft Office Application	David French	8/16/2019	Persistence	T1053 Scheduled Task
+Searching for Passwords in Files	Endgame	7/26/2019	Credential Access	T1081 Credentials in Files
+Searching for Passwords in Files	Endgame	7/26/2019	Credential Access	T1081 Credentials in Files
+Service Path Modification with sc.exe	Endgame	7/26/2019	Persistence	T1031 Modify Existing Service
+Service Stop or Disable with sc.exe	Endgame	7/26/2019	Impact	T1489 Service Stop
+Startup Folder Execution via VBScript	Daniel Stepanic	02/12/2020	Persistence	T1060 Registry Run Keys / Startup Folder
+Startup Folder Persistence with Shortcut/VBScript Files	Daniel Stepanic	02/12/2020	Persistence	T1060 Registry Run Keys / Startup Folder
+Stopping Services with net.exe	Endgame	7/26/2019	Impact	T1489 Service Stop
+Suspicious ADS File Creation	Endgame	11/30/2018	Defense Evasion	T1096 NTFS File Attributes
+Suspicious Bitsadmin Job via bitsadmin.exe	Endgame	11/30/2018	
+Defense Evasion
+
+Persistence
+
+T1197 BITS Jobs
+Suspicious Bitsadmin Job via PowerShell	Endgame	11/30/2018	
+Defense Evasion
+
+Persistence
+
+T1197 BITS Jobs
+Suspicious File Creation via Browser Extensions	Endgame	7/26/2019	Persistence	T1176 Browser Extensions
+Suspicious MS Office Registry Modifications	Daniel Stepanic	02/12/2020	Defense Evasion	T1112 Modify Registry
+Suspicious Process Loading Credential Vault DLL	David French	8/16/2019	Credential Access	T1003 Credential Dumping
+Suspicious Script Object Execution	Endgame	11/30/2018	
+Defense Evasion
+
+Execution
+
+T1117 Regsvr32
+System Information Discovery	Endgame	11/30/2018	Discovery	T1082 System Information Discovery
+System Network Connections Discovery	Endgame	7/26/2019	Discovery	T1049 System Network Connections Discovery
+System Owner and User Discovery	Endgame	7/26/2019	Discovery	T1033 System Owner/User Discovery
+Trap Signals Usage	Endgame	7/26/2019	
+Execution
+
+Persistence
+
+T1154 Trap
+Unload Sysmon Filter Driver with fltmc.exe	Endgame	11/30/2018	Defense Evasion	T1089 Disabling Security Tools
+Unusual Child Process	Endgame	11/30/2018	
+Defense Evasion
+
+Execution
+
+T1093 Process Hollowing
+
+T1055 Process Injection
+
+User Account Creation	Endgame	11/30/2018	
+Persistence
+
+Credential Access
+
+T1136 Create Account
+Volume Shadow Copy Deletion via VssAdmin	Endgame	05/17/2019	Impact	T1490 Inhibit System Recovery
+Volume Shadow Copy Deletion via WMIC	Endgame	05/17/2019	Impact	T1490 Inhibit System Recovery
+Windows File Permissions Modification	Endgame	7/26/2019	Defense Evasion	T1222 File Permissions Modification
+Windows Network Enumeration	Endgame	11/30/2018	Discovery	T1018 Remote System Discovery
+WMI Execution via Microsoft Office Application	David French	8/16/2019	Execution	T1047 Windows Management Instrumentation
+WMI Execution with Command Line Redirection	Daniel Stepanic	12/04/2019	Collection	T1074 Data Staged
