@@ -1,7 +1,7 @@
 import os
 
 def get_filelist(dir, Filelist):
-    newDir = dir
+
     if os.path.isfile(dir):
         Filelist.append(dir)
 
