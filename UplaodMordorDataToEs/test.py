@@ -31,7 +31,7 @@ def untar(fname, dirs):
     t.extractall(path = dirs)
 
 def get_filelist(dir, Filelist):
-    newDir = dir
+
     if os.path.isfile(dir):
         Filelist.append(dir)
         filepath, shortname, extention = jwkj_get_filePath_fileName_fileExt(dir)
@@ -51,6 +51,7 @@ def get_filelist(dir, Filelist):
 
 if __name__ == '__main__':
     list = get_filelist(image_path, [])
-    print(len(list))
+
     for e in list:
         print(e)
+    print(len(list))
